@@ -648,7 +648,7 @@ public class GVector implements java.io.Serializable, Cloneable {
 	long bits = 1L;
 
 	for (int i = 0; i < length; i++) {
-	    bits = 31L * bits + Double.doubleToLongBits(values[i]);
+	    bits = 31L * bits + VecMathUtil.doubleToLongBits(values[i]);
 	}
 
 	return (int) (bits ^ (bits >> 32));

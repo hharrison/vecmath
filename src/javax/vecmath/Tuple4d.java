@@ -432,10 +432,10 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
      */  
     public int hashCode() {
 	long bits = 1L;
-	bits = 31L * bits + Double.doubleToLongBits(x);
-	bits = 31L * bits + Double.doubleToLongBits(y);
-	bits = 31L * bits + Double.doubleToLongBits(z);
-	bits = 31L * bits + Double.doubleToLongBits(w);
+	bits = 31L * bits + VecMathUtil.doubleToLongBits(x);
+	bits = 31L * bits + VecMathUtil.doubleToLongBits(y);
+	bits = 31L * bits + VecMathUtil.doubleToLongBits(z);
+	bits = 31L * bits + VecMathUtil.doubleToLongBits(w);
 	return (int) (bits ^ (bits >> 32));
     }
 

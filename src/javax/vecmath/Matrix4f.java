@@ -2820,22 +2820,22 @@ public class Matrix4f implements java.io.Serializable, Cloneable {
      */  
     public int hashCode() {
 	long bits = 1L;
-	bits = 31L * bits + (long)Float.floatToIntBits(m00);
-	bits = 31L * bits + (long)Float.floatToIntBits(m01);
-	bits = 31L * bits + (long)Float.floatToIntBits(m02);
-	bits = 31L * bits + (long)Float.floatToIntBits(m03);
-	bits = 31L * bits + (long)Float.floatToIntBits(m10);
-	bits = 31L * bits + (long)Float.floatToIntBits(m11);
-	bits = 31L * bits + (long)Float.floatToIntBits(m12);
-	bits = 31L * bits + (long)Float.floatToIntBits(m13);
-	bits = 31L * bits + (long)Float.floatToIntBits(m20);
-	bits = 31L * bits + (long)Float.floatToIntBits(m21);
-	bits = 31L * bits + (long)Float.floatToIntBits(m22);
-	bits = 31L * bits + (long)Float.floatToIntBits(m23);
-	bits = 31L * bits + (long)Float.floatToIntBits(m30);
-	bits = 31L * bits + (long)Float.floatToIntBits(m31);
-	bits = 31L * bits + (long)Float.floatToIntBits(m32);
-	bits = 31L * bits + (long)Float.floatToIntBits(m33);
+	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m00);
+	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m01);
+	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m02);
+	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m03);
+	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m10);
+	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m11);
+	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m12);
+	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m13);
+	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m20);
+	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m21);
+	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m22);
+	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m23);
+	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m30);
+	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m31);
+	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m32);
+	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m33);
 	return (int) (bits ^ (bits >> 32));
     }
 

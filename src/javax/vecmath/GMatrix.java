@@ -1378,7 +1378,7 @@ public class GMatrix implements java.io.Serializable, Cloneable {
 
 	for (int i = 0; i < nRow; i++) {
 	    for (int j = 0; j < nCol; j++) {
-		bits = 31L * bits + Double.doubleToLongBits(values[i][j]);
+		bits = 31L * bits + VecMathUtil.doubleToLongBits(values[i][j]);
 	    }
 	}
 

@@ -324,9 +324,9 @@ public abstract class Tuple3d implements java.io.Serializable, Cloneable {
      */  
     public int hashCode() {
 	long bits = 1L;
-	bits = 31L * bits + Double.doubleToLongBits(x);
-	bits = 31L * bits + Double.doubleToLongBits(y);
-	bits = 31L * bits + Double.doubleToLongBits(z);
+	bits = 31L * bits + VecMathUtil.doubleToLongBits(x);
+	bits = 31L * bits + VecMathUtil.doubleToLongBits(y);
+	bits = 31L * bits + VecMathUtil.doubleToLongBits(z);
 	return (int) (bits ^ (bits >> 32));
     }
 
