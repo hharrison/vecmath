@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+
+<!--
+/*
+ * $RCSfile$
+ *
+ * Copyright (c) 2004 Sun Microsystems, Inc. All rights reserved.
+ *
+ * Use is subject to license terms.
+ *
+ * $Revision$
+ * $Date$
+ * $State$
+ */
+ -->
+
+<project name="vecmath" default="jar-opt" basedir=".">
+
+  <!-- Set global properties for this build -->
+  <property name="src"     location="src"/>
+  <property name="build"   location="build"/>
+  <property name="dist"    location="dist"/>
+  <property name="version" value="1_3_2"/>
+  <property name="docname" value="vecmath-${version}-doc"/>
+  
+  <target name="echo">	
+    <echo message="user.name = ${user.name}"/>
+    <echo message="user.home = ${user.home}"/>
+    <echo message="java.home = ${java.home}"/>
+    <echo message="ant.home  = ${ant.home}"/>
+    <echo message="O/S arch is ${os.arch}"/>
+    <echo message="O/S name is ${os.name}"/>
+  </target>
+
+
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp>
+	<format property="buildtime"
+		pattern="yyyy-MM-dd'T'HH:mm:ss"/>
+    </tstamp>
+
+    <!-- Create the base build directory -->
+    <mkdir dir="${build}"/>
+  </target>
+
+  <target name="compile-debug" depends="init">
+
+    <!-- Create the debug build directory structure used for compile -->
+    <mkdir dir="${build}/debug/classes"/>
+
+    <!-- Compile the java code from ${src} into ${build}/debug/classes -->
+    <javac srcdir="${src}"
+           destdir="${build}/debug/classes"	   
+	   source="1.4"
+	   target="1.4"
+	   debug="yes"
+           deprecation="on"
+    />
+
+    <!-- Copy the I18N property files while retaining package location -->
+    <copy todir="${build}/debug/classes">
+        <fileset dir="${src}" includes="**/*.properties"/>
+    </copy>
+  </target>
+
+  <target name="compile-opt" depends="init">
+
+    <!-- Create the opt build directory structure used for compile -->
+    <mkdir dir="${build}/opt/classes"/>
+
+    <!-- Compile the java code from ${src} into ${build}/opt/classes -->
+    <javac srcdir="${src}"
+           destdir="${build}/opt/classes"	   
+	   source="1.4"
+	   target="1.4"
+	   debug="no"
+           deprecation="on"
+    />
+
+    <!-- Copy the I18N property files while retaining package location -->
+    <copy todir="${build}/opt/classes">
+        <fileset dir="${src}" includes="**/*.properties"/>
+    </copy>
+  </target>
+
+  <target name="compile" depends="compile-opt,compile-debug"/>
+
+  <target name="jar-debug" depends="compile-debug">
+    <!-- Create the jar directory -->
+    <mkdir dir="${build}/debug/lib/ext"/>
+
+    <!-- Copy the copyright file and all license files -->
+    <copy todir="${build}/debug/classes">
+      <fileset dir="." includes="COPYRIGHT.txt"/>
+      <fileset dir="." includes="*LICENSE*.txt"/>
+    </copy>
+
+    <!-- Put everything in ${build}/debug/classes into the vecmath.jar file -->
+    <jar jarfile="${build}/debug/lib/ext/vecmath.jar"
+         manifest="${src}/VECMATH.MF" compress="false" update="yes">
+	<fileset dir="${build}/debug/classes"/>
+    </jar>
+  </target>
+
+  <target name="jar-opt" depends="compile-opt">
+    <!-- Create the jar directory -->
+    <mkdir dir="${build}/opt/lib/ext"/>
+
+    <!-- Copy the copyright file and all license files -->
+    <copy todir="${build}/opt/classes">
+      <fileset dir="." includes="COPYRIGHT.txt"/>
+      <fileset dir="." includes="*LICENSE*.txt"/>
+    </copy>
+
+    <!-- Put everything in ${build}/classes/opt into the vecmath.jar file -->
+    <jar jarfile="${build}/opt/lib/ext/vecmath.jar"
+         manifest="${src}/VECMATH.MF" compress="false" update="yes">
+	<fileset dir="${build}/opt/classes"/>
+    </jar>
+  </target>
+
+  <target name="jar" depends="jar-opt,jar-debug"/>
+
+  <target name="docs" depends="init">
+    <!-- Create the build directory structure used by docs -->
+    <mkdir dir="${build}/javadocs"/>
+
+    <!-- Compile the javadoc from ${src} into ${build}/javadocs -->
+    <javadoc sourcepath="${src}"
+	     packagenames="javax.vecmath.*"
+	     maxmemory="128m"
+             destdir="${build}/javadocs"
+             windowtitle="Vecmath ${version}">
+    </javadoc>
+
+    <!-- Copy the copyright file -->
+    <copy todir="${build}/javadocs">
+      <fileset dir="." includes="COPYRIGHT.txt"/>
+    </copy>
+  </target>
+
+  <target name="dist" depends="jar-opt,docs">
+    <!-- Create the distribution directory -->
+    <mkdir dir="${dist}/lib/ext"/>
+
+    <!-- Copy the jar file -->
+    <copy file="${build}/opt/lib/ext/vecmath.jar" todir="${dist}/lib/ext"/>
+
+    <!-- Create the docs distribution directory -->
+    <mkdir dir="${dist}/javadocs"/>
+
+    <!-- Put everything in ${build}/javadocs into the zip docname file -->
+    <zip zipfile="${dist}/javadocs/${docname}.zip" basedir="${build}/javadocs"/>
+  </target>
+
+  <target name="all" depends="jar-debug,dist"/>
+
+  <target name="clean-dist">
+    <!-- Delete the ${dist} directory tree  -->
+    <delete dir="${dist}"/>
+  </target>
+
+  <target name="clean">
+    <!-- Delete the ${build}, and ${dist} directory trees  -->
+    <delete dir="${build}"/>
+    <delete dir="${dist}"/>
+  </target>
+
+  <description>
+The following ant targets are available ("jar-opt" is the default):
+
+      all           - execute targets jar-debug and dist
+
+      clean         - removes WS/build/ and WS/dist/
+
+      clean-dist    - removes WS/dist
+
+      compile       - execute targets compile-debug and compile-opt
+ 
+      compile-debug - builds all classes in WS/src into class files
+                      under WS/build/classes/debug
+
+      compile-opt   - builds all classes in WS/src/ into class files 
+                      under WS/build/classes/opt
+
+      dist          - creates WS/dist/lib/opt/ext/vecmath.jar
+                      from class files under WS/build/classes/opt and
+                      creates WS/dist/doc/vecmath-${version}-doc.zip from
+		      javadoc under WS/build/javadocs
+
+      docs          - builds all classes in WS/src into javadoc under 
+                      WS/build/javadocs
+
+      echo          - echo some useful information, such as user.home,
+                      ant.home and java.home
+
+      jar           - execute targets jar-debug and jar-opt
+
+      jar-debug     - creates WS/build/lib/debug/ext/vecmath.jar
+                      from class files under WS/build/classes/debug
+
+      jar-opt       - creates WS/build/lib/opt/ext/vecmath.jar
+                      from class files under WS/build/classes/opt
+  </description>
+</project>

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<!--
+/*
+ * $RCSfile$
+ *
+ * Copyright (c) 2004 Sun Microsystems, Inc. All rights reserved.
+ *
+ * Use is subject to license terms.
+ *
+ * $Revision$
+ * $Date$
+ * $State$
+ */
+ -->
+
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>README-build</title>
+</head>
+<body>
+<span style="font-weight: bold; text-decoration: underline;">Building
+the
+Vecmath Packages<br>
+<br>
+</span>To build the vecmath packages, you must first download the
+vecmath
+CVS repository:<br>
+<br>
+NOTE: this top-level directory must be named "vecmath".<span
+ style="font-weight: bold; text-decoration: underline;"><br>
+<br>
+System Requirements<br>
+<br>
+</span>Vecmath is 100% Java, so any operating environment that supports
+J2SE should work.&nbsp; We have built vecmath on the following
+operating environments:<br>
+<ul>
+  <li>Solaris: Sparc (Ultra60 or better) running Solaris 9</li>
+  <li>Linux: i386/i586 running SuSE 9 or RedHat 9.0</li>
+  <li>Windows: Windows/XP (Windows
+2000 should work, but is untested)<br>
+  </li>
+</ul>
+The following software must be installed:<br>
+<ul>
+  <li><a href="http://java.sun.com/j2se">JDK 1.4.2&nbsp;</a> <br>
+  </li>
+  <li><a href="http://jakarta.apache.org/ant">Apache Ant 1.6.1&nbsp;</a>
+    <br>
+  </li>
+</ul>
+<span style="font-weight: bold; text-decoration: underline;">Building
+Vecmath<br>
+<br>
+</span> Before you start building, please check that your PATH must
+include the
+following directories:<br>
+&nbsp;&nbsp;&nbsp; .&nbsp;&nbsp;&nbsp; &lt;ant-root-dir&gt;/bin<br>
+&nbsp;&nbsp;&nbsp; .&nbsp;&nbsp;&nbsp; &lt;jdk-root_dir&gt;/bin<br>
+<br>
+The default target, jar-opt, creates an optimized jar files.<br>
+<br>
+Steps:<br>
+<br>
+&nbsp;&nbsp;&nbsp; cd &lt;java3d-root-dir&gt;/vecmath<br>
+&nbsp;&nbsp;&nbsp; ant<br>
+<br>
+This will build the javax.vecmath package.&nbsp; The build will be put
+in vecmath/build/opt<br>
+<br>
+Other targets can be found by typing "ant -projecthelp".&nbsp; Note
+that ant<br>
+must be run from the top-level directory.<br>
+<br>
+</body>
+</html>
