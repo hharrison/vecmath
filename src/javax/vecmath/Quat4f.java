@@ -606,11 +606,12 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
      dot = x*q1.x + y*q1.y + z*q1.z + w*q1.w;
 
      if ( dot < 0 ) {
-       // switch the quaterion values
+        // negate quaternion
        q1.x = -q1.x;  q1.y = -q1.y;  q1.z = -q1.z;  q1.w = -q1.w;
+       dot = -dot;
      }
 
-     if ( (1.0 - Math.abs(dot) ) > EPS ) {
+     if ( (1.0 - dot) > EPS ) {
        om = Math.acos(dot);
        sinom = Math.sin(om);
        s1 = Math.sin((1.0-alpha)*om)/sinom;
@@ -648,11 +649,12 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
      dot = q2.x*q1.x + q2.y*q1.y + q2.z*q1.z + q2.w*q1.w;
      
      if ( dot < 0 ) {
-       // switch the quaterion values
+        // negate quaternion
        q1.x = -q1.x;  q1.y = -q1.y;  q1.z = -q1.z;  q1.w = -q1.w;
+       dot = -dot;
      }
 
-     if ( (1.0 - Math.abs(dot) ) > EPS ) {
+     if ( (1.0 - dot) > EPS ) {
        om = Math.acos(dot);
        sinom = Math.sin(om);
        s1 = Math.sin((1.0-alpha)*om)/sinom;
