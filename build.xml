@@ -91,7 +91,7 @@
     <mkdir dir="${build}/debug/lib/ext"/>
 
     <!-- Copy the copyright file and all license files -->
-    <copy todir="${build}/debug/classes">
+    <copy todir="${build}/debug/classes/javax">
       <fileset dir="." includes="COPYRIGHT.txt"/>
       <fileset dir="." includes="*LICENSE*.txt"/>
     </copy>
@@ -108,7 +108,7 @@
     <mkdir dir="${build}/opt/lib/ext"/>
 
     <!-- Copy the copyright file and all license files -->
-    <copy todir="${build}/opt/classes">
+    <copy todir="${build}/opt/classes/javax">
       <fileset dir="." includes="COPYRIGHT.txt"/>
       <fileset dir="." includes="*LICENSE*.txt"/>
     </copy>
