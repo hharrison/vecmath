@@ -18,7 +18,7 @@ import java.lang.Math;
  * A 4 element texture coordinate that is represented by single precision 
  * floating point x,y,z,w coordinates.
  *
- * @since Java 3D 1.3
+ * @since vecmath 1.3
  */
 public class TexCoord4f extends Tuple4f implements java.io.Serializable {
 

@@ -18,7 +18,7 @@ import java.lang.Math;
  * A 4 element point represented by signed integer x,y,z,w
  * coordinates.
  *
- * @since Java 3D 1.2
+ * @since vecmath 1.2
  */
 public class Point4i extends Tuple4i implements java.io.Serializable {
 

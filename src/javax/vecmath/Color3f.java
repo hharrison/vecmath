@@ -86,7 +86,7 @@ public class Color3f extends Tuple3f implements java.io.Serializable {
      * @param color the AWT color with which to initialize this
      * Color3f object
      *
-     * @since Java 3D 1.2
+     * @since vecmath 1.2
      */
     public Color3f(Color color) {
 	super((float)color.getRed() / 255.0f,
@@ -111,7 +111,7 @@ public class Color3f extends Tuple3f implements java.io.Serializable {
      *
      * @param color the AWT color to copy into this Color3f object
      *
-     * @since Java 3D 1.2
+     * @since vecmath 1.2
      */
     public final void set(Color color) {
 	x = (float)color.getRed() / 255.0f;
@@ -126,7 +126,7 @@ public class Color3f extends Tuple3f implements java.io.Serializable {
      *
      * @return a new AWT Color object
      *
-     * @since Java 3D 1.2
+     * @since vecmath 1.2
      */
     public final Color get() {
 	int r = Math.round(x * 255.0f);

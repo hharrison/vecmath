@@ -18,7 +18,7 @@ import java.lang.Math;
  * A 3 element point represented by signed integer x,y,z
  * coordinates.
  *
- * @since Java 3D 1.2
+ * @since vecmath 1.2
  */
 public class Point3i extends Tuple3i implements java.io.Serializable {
 

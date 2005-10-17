@@ -85,7 +85,7 @@ public class Color4b extends Tuple4b implements java.io.Serializable {
      * @param color the AWT color with which to initialize this
      * Color4b object
      *
-     * @since Java 3D 1.2
+     * @since vecmath 1.2
      */
     public Color4b(Color color) {
 	super((byte)color.getRed(),
@@ -111,7 +111,7 @@ public class Color4b extends Tuple4b implements java.io.Serializable {
      *
      * @param color the AWT color to copy into this Color4b object
      *
-     * @since Java 3D 1.2
+     * @since vecmath 1.2
      */
     public final void set(Color color) {
 	x = (byte)color.getRed();
@@ -127,7 +127,7 @@ public class Color4b extends Tuple4b implements java.io.Serializable {
      *
      * @return a new AWT Color object
      *
-     * @since Java 3D 1.2
+     * @since vecmath 1.2
      */
     public final Color get() {
 	int r = (int)x & 0xff;

@@ -2080,7 +2080,7 @@ public class Matrix3f implements java.io.Serializable, Cloneable {
      * @return a clone of this instance.
      * @exception OutOfMemoryError if there is not enough memory.
      * @see java.lang.Cloneable
-     * @since Java 3D 1.3
+     * @since vecmath 1.3
      */
     public Object clone() {
 	Matrix3f m1 = null;

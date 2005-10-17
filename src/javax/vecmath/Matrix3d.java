@@ -3088,7 +3088,7 @@ static  double max3( double[] values) {
      * @return a clone of this instance.
      * @exception OutOfMemoryError if there is not enough memory.
      * @see java.lang.Cloneable
-     * @since Java 3D 1.3
+     * @since vecmath 1.3
      */
     public Object clone() {
 	Matrix3d m1 = null;

@@ -94,7 +94,7 @@ public class Vector4f extends Tuple4f implements java.io.Serializable {
      * is set to 0.
      * @param t1 the tuple to be copied
      *
-     * @since Java 3D 1.2
+     * @since vecmath 1.2
      */
     public Vector4f(Tuple3f t1) {
 	super(t1.x, t1.y, t1.z, 0.0f);
@@ -116,7 +116,7 @@ public class Vector4f extends Tuple4f implements java.io.Serializable {
      * is set to 0.
      * @param t1 the tuple to be copied
      *
-     * @since Java 3D 1.2
+     * @since vecmath 1.2
      */
     public final void set(Tuple3f t1) {
 	this.x = t1.x;
