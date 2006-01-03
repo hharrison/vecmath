@@ -54,7 +54,7 @@
            destdir="${build}/debug/classes"	   
 	   source="1.4"
 	   target="1.4"
-	   debug="yes"
+	   debug="true"
            deprecation="on"
     />
 
@@ -74,7 +74,8 @@
            destdir="${build}/opt/classes"	   
 	   source="1.4"
 	   target="1.4"
-	   debug="no"
+           debug="true"
+           debuglevel="lines,source"
            deprecation="on"
     />
 
