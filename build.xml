@@ -52,8 +52,8 @@
     <!-- Compile the java code from ${src} into ${build}/debug/classes -->
     <javac srcdir="${src}"
            destdir="${build}/debug/classes"	   
-	   source="1.4"
-	   target="1.4"
+	   source="1.5"
+	   target="1.5"
 	   debug="true"
            deprecation="on"
     />
@@ -72,8 +72,8 @@
     <!-- Compile the java code from ${src} into ${build}/opt/classes -->
     <javac srcdir="${src}"
            destdir="${build}/opt/classes"	   
-	   source="1.4"
-	   target="1.4"
+	   source="1.5"
+	   target="1.5"
            debug="true"
            debuglevel="lines,source"
            deprecation="on"
