@@ -891,9 +891,9 @@ public class Matrix3d implements java.io.Serializable, Cloneable {
         double cosTheta = Math.cos(a1.angle);
         double t = 1.0 - cosTheta;
 
-        double xz = a1.x * a1.z;    
-        double xy = a1.x * a1.y;
-        double yz = a1.y * a1.z;
+        double xz = ax * az;    
+        double xy = ax * ay;
+        double yz = ay * az;
 
         m00 = t * ax * ax + cosTheta;
         m01 = t * xy - sinTheta * az;
