@@ -7,3 +7,11 @@ Implementation-Version: 1.5.0
 Implementation-Vendor: Sun Microsystems, Inc.
 Extension-Name: javax.vecmath
 Implementation-Vendor-Id: com.sun
+Bundle-ManifestVersion: 2
+Bundle-Name: Vecmath Library
+Bundle-Vendor: Sun Microsystems
+Bundle-Localization: plugin
+Bundle-SymbolicName: javax.vecmath; singleton:=true
+Bundle-Version: 1.5.0
+Eclipse-AutoStart: true
+Export-Package: javax.vecmath
