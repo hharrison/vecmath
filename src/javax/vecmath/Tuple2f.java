@@ -331,9 +331,11 @@ public abstract class Tuple2f implements java.io.Serializable, Cloneable {
        float diff;
 
        diff = x - t1.x;
+       if(Float.isNaN(diff)) return false;
        if((diff<0?-diff:diff) > epsilon) return false;
 
        diff = y - t1.y;
+       if(Float.isNaN(diff)) return false;
        if((diff<0?-diff:diff) > epsilon) return false;
 
        return true;

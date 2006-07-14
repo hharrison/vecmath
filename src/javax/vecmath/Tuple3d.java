@@ -377,12 +377,15 @@ public abstract class Tuple3d implements java.io.Serializable, Cloneable {
        double diff;
 
        diff = x - t1.x;
+       if(Double.isNaN(diff)) return false;
        if((diff<0?-diff:diff) > epsilon) return false;
 
        diff = y - t1.y;
+       if(Double.isNaN(diff)) return false;
        if((diff<0?-diff:diff) > epsilon) return false;
 
        diff = z - t1.z;
+       if(Double.isNaN(diff)) return false;
        if((diff<0?-diff:diff) > epsilon) return false;
 
        return true;
