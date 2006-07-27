@@ -529,4 +529,102 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 	}
     }
 
+
+    /**
+	 * Get the axis angle, in radians.<br>
+	 * An axis angle is a rotation angle about the vector (x,y,z). 
+	 * 
+	 * @return Returns the angle, in radians.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final float getAngle() {
+		return angle;
+	}
+
+
+	/**
+	 * Set the axis angle, in radians.<br>
+	 * An axis angle is a rotation angle about the vector (x,y,z). 
+	 * 
+	 * @param angle The angle to set, in radians.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setAngle(float angle) {
+		this.angle = angle;
+	}
+
+
+	/**
+	 * Get value of <i>x</i> coordinate.  
+	 * 
+	 * @return the <i>x</i> coordinate.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final float getX() {
+		return x;
+	}
+
+
+	/**
+	 * Set a new value for <i>x</i> coordinate.
+	 * 
+	 * @param x the <i>x</i> coordinate.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setX(float x) {
+		this.x = x;
+	}
+
+
+	/**
+	 * Get value of <i>y</i> coordinate.
+	 * 
+	 * @return the <i>y</i> coordinate 
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final float getY() {
+		return y;
+	}
+
+
+	/**
+	 * Set a new value for <i>y</i> coordinate.
+	 * 
+	 * @param y the <i>y</i> coordinate.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setY(float y) {
+		this.y = y;
+	}
+
+
+	/**
+	 * Get  value of <i>z</i> coordinate.
+	 * 
+	 * @return the <i>z</i> coordinate.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final float getZ() {
+		return z;
+	}
+
+
+	/**
+	 * Set a new value for <i>z</i> coordinate.
+	 * 
+	 * @param z the <i>z</i> coordinate.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setZ(float z) {
+		this.z = z;
+	}
+
 }
