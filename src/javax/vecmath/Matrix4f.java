@@ -3242,4 +3242,357 @@ public class Matrix4f implements java.io.Serializable, Cloneable {
 	return m1;
     }
 
+    /**
+	 * Get the first matrix element in the first row.
+	 * 
+	 * @return Returns the m00.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final  float getM00() {
+		return m00;
+	}
+
+	/**
+	 * Set the first matrix element in the first row.
+	 * 
+	 * @param m00 The m00 to set.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final  void setM00(float m00) {
+		this.m00 = m00;
+	}
+
+	/**
+	 * Get the second matrix element in the first row.
+	 * 
+	 * @return Returns the m01.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final  float getM01() {
+		return m01;
+	}
+
+	/**
+	 * Set the second matrix element in the first row.
+	 * 
+	 * @param m01 The m01 to set.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public  final void setM01(float m01) {
+		this.m01 = m01;
+	}
+
+	/**
+	 * Get the third matrix element in the first row.
+	 * 
+	 * @return Returns the m02.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final float getM02() {
+		return m02;
+	}
+
+	/**
+	 * Set the third matrix element in the first row.
+	 * 
+	 * @param m02 The m02 to set.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final  void setM02(float m02) {
+		this.m02 = m02;
+	}
+
+	/**
+	 * Get first matrix element in the second row.
+	 * 
+	 * @return Returns the m10.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final  float getM10() {
+		return m10;
+	}
+
+	/**
+	 * Set first matrix element in the second row.
+	 * 
+	 * @param m10 The m10 to set.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final  void setM10(float m10) {
+		this.m10 = m10;
+	}
+
+	/**
+	 * Get second matrix element in the second row.
+	 * 
+	 * @return Returns the m11.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final  float getM11() {
+		return m11;
+	}
+
+	/**
+	 * Set the second matrix element in the second row.
+	 * 
+	 * @param m11 The m11 to set.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final  void setM11(float m11) {
+		this.m11 = m11;
+	}
+
+	/**
+	 * Get the third matrix element in the second row.
+	 * 
+	 * @return Returns the m12.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final  float getM12() {
+		return m12;
+	}
+
+	/**
+	 * Set the third matrix element in the second row.
+	 * 
+	 * @param m12 The m12 to set.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final  void setM12(float m12) {
+		this.m12 = m12;
+	}
+
+	/**
+	 * Get the first matrix element in the third row.
+	 * 
+	 * @return Returns the m20.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final  float getM20() {
+		return m20;
+	}
+
+	/**
+	 * Set the first matrix element in the third row.
+	 * 
+	 * @param m20 The m20 to set.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setM20(float m20) {
+		this.m20 = m20;
+	}
+
+	/**
+	 * Get the second matrix element in the third row.
+	 * 
+	 * @return Returns the m21.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final float getM21() {
+		return m21;
+	}
+
+	/**
+	 * Set the second matrix element in the third row.
+	 * 
+	 * @param m21 The m21 to set.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setM21(float m21) {
+		this.m21 = m21;
+	}
+
+	/**
+	 * Get the third matrix element in the third row.
+	 * 
+	 * @return Returns the m22.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final float getM22() {
+		return m22;
+	}
+
+	/**
+	 * Set the third matrix element in the third row.
+	 * 
+	 * @param m22 The m22 to set.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setM22(float m22) {
+		this.m22 = m22;
+	}
+
+	/**
+	 * Get the fourth element of the first row.
+	 * 
+	 * @return Returns the m03.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final float getM03() {
+		return m03;
+	}
+
+	/**
+	 * Set the fourth element of the first row.
+	 * 
+	 * @param m03 The m03 to set.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setM03(float m03) {
+		this.m03 = m03;
+	}
+
+	/**
+	 * Get the fourth element of the second row.
+	 * 
+	 * @return Returns the m13.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final float getM13() {
+		return m13;
+	}
+
+	/**
+	 * Set the fourth element of the second row.
+	 * 
+	 * @param m13 The m13 to set.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setM13(float m13) {
+		this.m13 = m13;
+	}
+
+	/**
+	 * Get the fourth element of the third row.
+	 * 
+	 * @return Returns the m23.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final float getM23() {
+		return m23;
+	}
+
+	/**
+	 * Set the fourth element of the third row.
+	 * 
+	 * @param m23 The m23 to set.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setM23(float m23) {
+		this.m23 = m23;
+	}
+
+	/**
+	 * Get the first element of the fourth row.
+	 * 
+	 * @return Returns the m30.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final float getM30() {
+		return m30;
+	}
+
+	/**
+	 * Set the first element of the fourth row.
+	 * 
+	 * @param m30 The m30 to set.
+	 * 
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setM30(float m30) {
+		this.m30 = m30;
+	}
+
+	/**
+	 * Get the second element of the fourth row.
+	 * 
+	 * @return Returns the m31.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final float getM31() {
+		return m31;
+	}
+
+	/**
+	 * Set the second element of the fourth row.
+	 * 
+	 * @param m31 The m31 to set.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setM31(float m31) {
+		this.m31 = m31;
+	}
+
+	/**
+	 * Get the third element of the fourth row. 
+	 * 
+	 * @return Returns the m32.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final float getM32() {
+		return m32;
+	}
+
+	/**
+	 * Set the third element of the fourth row.
+	 * 
+	 * @param m32 The m32 to set.
+	 * 
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setM32(float m32) {
+		this.m32 = m32;
+	}
+
+	/**
+	 * Get the fourth element of the fourth row.
+	 * 
+	 * @return Returns the m33.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final float getM33() {
+		return m33;
+	}
+
+	/**
+	 * Set the fourth element of the fourth row.
+	 * 
+	 * @param m33 The m33 to set.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setM33(float m33) {
+		this.m33 = m33;
+	}
 }
