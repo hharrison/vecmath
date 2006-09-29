@@ -1,0 +1,289 @@
+------------------------------------------------------------------------
+$RCSfile$
+$Revision$
+$Date$
+------------------------------------------------------------------------
+This document conatains proposed API changes to the vecmath 1.5 API
+that deviate from the 1.4 API.
+
+This file must be updated to record the addition or deprecation of any
+public or protected class, interface, field, constructor, or method to
+the vecmath API.
+
+The one exception to this rule is that you don't need to update this
+file when adding a non-final (i.e., virtual) method to a class if that
+method--with exactly the same signature--already exists in a
+superclass.  For example, adding a "toString" method to a vecmath object
+doesn't require an entry in this file.
+
+No incompatible changes to the vecmath 1.4 API are allowed.
+
+
+I. New/deprecated fields, constructors, methods
+
+    AxisAngle4f
+    ---------------
+    New methods:
+     public final void setAngle(float angle)
+     public final float getAngle()
+     public final float getX()    
+     public final float getY()
+     public final float getZ()
+     public final void setX(float x)
+     public final void setY(float y)     
+     public final void setZ(float z)
+     
+    AxisAngle4d
+    --------------
+    New methods:
+       public final void setAngle(double angle)
+       public final float getAngle()
+       public final double getX()
+       public final double getY()
+       public final double getZ()
+       public final void setX(double x)       
+       public final void setY(double y)       
+       public final void setZ(double z)
+     
+   
+       
+    Matrix3d
+    ---------------
+    New methods:
+       
+       public final void setM00(double m00)
+       public final void setM01(double m01)
+       public final void setM02(double m02)
+       public final void setM10(double m10)
+       public final void setM11(double m11)
+       public final void setM12(double m12)
+       public final void setM20(double m20)
+       public final void setM21(double m21)
+       public final void setM22(double m22)
+       public final double getM00()
+       public final double getM01()
+       public final double getM02()
+       public final double getM10()
+       public final double getM11()
+       public final double getM12()
+       public final double getM20()
+       public final double getM21()
+       public final double getM22()
+       
+    Matrix3f
+    ---------------
+    New methods:
+        public final void setM00(float m00)
+        public final void setM01(float m01)
+        public final void setM02(float m02)
+        public final void setM10(float m10)
+        public final void setM11(float m11)
+        public final void setM12(float m12)
+        public final void setM20(float m20)
+        public final void setM21(float m21)
+        public final void setM22(float m22)
+        public final float getM00()
+        public final float getM01()
+        public final float getM02()
+        public final float getM10()
+        public final float getM11()
+        public final float getM12()
+        public final float getM20()
+        public final float getM21()
+        public final float getM22()
+       
+    Matrix4d
+    -------------
+    New methods: 
+        public final void  setM00(double m00)
+        public final void  setM01(double m01)
+        public final void  setM02(double m02)
+        public final void  setM03(double m03)
+        public final void  setM10(double m10)
+        public final void  setM11(double m11)
+        public final void  setM12(double m12)
+        public final void  setM13(double m13)
+        public final void  setM20(double m20)
+        public final void  setM21(double m21)
+        public final void  setM22(double m22)
+        public final void  setM23(double m23)
+        public final void  setM30(double m30)
+        public final void  setM31(double m31)
+        public final void  setM32(double m32)
+        public final void  setM33(double m33)
+        public final double getM00()
+        public final double getM01()
+        public final double getM02()
+        public final double getM03()
+        public final double getM10()
+        public final double getM11()
+        public final double getM12()
+        public final double getM13()
+        public final double getM20()
+        public final double getM21()
+        public final double getM22()
+        public final double getM23()
+        public final double getM30()
+        public final double getM31()
+        public final double getM32()
+        public final double getM33()
+        
+              
+    Matrix4f
+    -------------
+    New methods:
+         public final void  setM00(float m00)
+         public final void  setM01(float m01)
+         public final void  setM02(float m02)
+         public final void  setM03(float m03)
+         public final void  setM10(float m10)
+         public final void  setM11(float m11)
+         public final void  setM12(float m12)
+         public final void  setM13(float m13)
+         public final void  setM20(float m20)
+         public final void  setM21(float m21)
+         public final void  setM22(float m22)
+         public final void  setM23(float m23)
+         public final void  setM30(float m30)
+         public final void  setM31(float m31)
+         public final void  setM32(float m32)
+         public final void  setM33(float m33)
+         public final float getM00()
+         public final float getM01()
+         public final float getM02()
+         public final float getM03()
+         public final float getM10()
+         public final float getM11()
+         public final float getM12()
+         public final float getM13()
+         public final float getM20()
+         public final float getM21()
+         public final float getM22()
+         public final float getM23()
+         public final float getM30()
+         public final float getM31()
+         public final float getM32()
+         public final float getM33()
+
+    Tuple2d
+    ------------
+    New methods:         
+      public final void setX(double x)
+      public final void setY(double y)
+      public final double getX()
+      public final double getY()
+         
+         
+    Tuple2f
+    ------------
+    New methods:
+      public final void setX(float x)
+      public final void setY(float y)
+      public final float getX()
+      public final float getY()
+    
+    Tuple2i
+    ------------
+    New methods:
+      public final void setX(int x)
+      public final void setY(int y)
+      public final int getX()
+      public final int getY()
+          
+   Tuple3d
+   ------------
+   New methods:
+     public final void setX(double x)
+     public final void setY(double y)
+     public final void setZ(double z)
+     public final double getX()
+     public final double getY()
+     public final double getZ()
+          
+    Tuple3f
+    ------------
+    New methods:
+      public final void setX(float x)
+      public final void setY(float y)
+      public final void setZ(float z)
+      public final float getX()
+      public final float getY()
+      public final float getZ()
+           
+    Tuple3i
+    ------------
+    New methods:
+     public final void setX(int x)
+     public final void setY(int y)
+     public final void setZ(int z)
+     public final int getX()
+     public final int getY()
+     public final int getZ()
+          
+    Tuple3b
+    ------------
+    New methods:
+      public final void setX(byte x)
+      public final void setY(byte y)
+      public final void setZ(byte z)
+      public final byte getX()
+      public final byte getY()
+      public final byte getZ()
+        
+    Tuple4d
+    ------------
+    New methods:
+      public final void setX(double x)
+      public final void setY(double y)
+      public final void setZ(double z)
+      public final void setW(double w)
+      public final double getX()
+      public final double getY()
+      public final double getZ()
+      public final double getW()
+          
+    Tuple4f
+    ------------
+    New methods:
+      public final void setX(float x)
+      public final void setY(float y)
+      public final void setZ(float z)
+      public final void setW(double w)
+      public final float getX()
+      public final float getY()
+      public final float getZ()
+      public final float getW()  
+  
+    Tuple4i
+    ------------
+    New methods:
+      public final void setX(int x)
+      public final void setY(int y)
+      public final void setZ(int z)
+      public final void setW(int w)
+      public final int getX()
+      public final int getY()
+      public final int getZ()
+      public final int getW()
+
+    Tuple4b
+    ------------
+    New methods:
+      public final void setX(byte x)
+      public final void setY(byte y)
+      public final void setZ(byte z)
+      public final void setW(byte w)
+      public final byte getX()
+      public final byte getY()
+      public final byte getZ()
+      public final byte getW() 
+
+II. Reparented classes
+
+    <EXISTINGCLASS>
+    ---------------
+        <EXISTINGCLASS> now extends <NEWSUPERCLASS> (used to extend <OLDSUPERCLASS>)
+
+
+III. New classes and interfaces (in javax.vecmath)
+

@@ -226,4 +226,75 @@ public abstract class Tuple3b implements java.io.Serializable, Cloneable {
 	}
     }
 
+
+    /**
+	 * Get <i>x</i>, the  first value.
+	 * 
+	 * @return the first value.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final byte getX() {
+		return x;
+	}
+
+
+	/**
+	 * Set <i>x</i>, the first value.
+	 * 
+	 * @param x the first value to set. 
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setX(byte x) {
+		this.x = x;
+	}
+
+
+	/**
+	 * Get <i>y</i>, the second value.
+	 * 
+	 * @return the second value. 
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final byte getY() {
+		return y;
+	}
+
+
+	/**
+	 * Set <i>y</i>, the second value.
+	 * 
+	 * @param y the second value to set.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setY(byte y) {
+		this.y = y;
+	}
+
+	/**
+	 * Get <i>z</i>, the third value.
+	 * 
+	 * @return the third value. 
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final byte getZ() {
+		return z;
+	}
+
+
+	/**
+	 * Set <i>z</i>, the third value.
+	 * 
+	 * @param z the third value to set.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setZ(byte z) {
+		this.z = z;
+	}
+
 }

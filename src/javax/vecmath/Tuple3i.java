@@ -499,4 +499,73 @@ public abstract class Tuple3i implements java.io.Serializable, Cloneable {
 	}
     }
 
+
+    /**
+	 * Get the <i>x</i> coordinate.
+	 * 
+	 * @return  the <i>x</i> coordinate.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final int getX() {
+		return x;
+	}
+
+
+	/**
+	 * Set the <i>x</i> coordinate.
+	 * 
+	 * @param x  value to <i>x</i> coordinate.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setX(int x) {
+		this.x = x;
+	}
+
+
+	/**
+	 * Get the <i>y</i> coordinate.
+	 * 
+	 * @return  the <i>y</i> coordinate.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final int getY() {
+		return y;
+	}
+
+
+	/**
+	 * Set the <i>y</i> coordinate.
+	 * 
+	 * @param y value to <i>y</i> coordinate.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setY(int y) {
+		this.y = y;
+	}
+
+	/**
+	 * Get the <i>z</i> coordinate.
+	 * 
+	 * @return the <i>z</i> coordinate.
+	 * @since vecmath 1.5
+	 */
+	public final int getZ() {
+		return z;
+	}
+
+
+	/**
+	 * Set the <i>z</i> coordinate.
+	 * 
+	 * @param z value to <i>z</i> coordinate.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setZ(int z) {
+		this.z = z;
+	}
 }

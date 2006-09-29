@@ -4,7 +4,7 @@
     <configuration>
         <general-data xmlns="http://www.netbeans.org/ns/freeform-project/1">
             <!--Do not use Project Properties customizer when editing this file manually.-->
-            <name>vecmath-1.4.0</name>
+            <name>vecmath-1.5.0</name>
             <properties/>
             <folders>
                 <source-folder>
@@ -56,7 +56,7 @@
             <compilation-unit>
                 <package-root>src</package-root>
                 <built-to>build/debug/lib/ext/vecmath.jar</built-to>
-                <source-level>1.4</source-level>
+                <source-level>1.5</source-level>
             </compilation-unit>
         </java-data>
     </configuration>

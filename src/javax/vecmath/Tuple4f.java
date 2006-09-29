@@ -393,15 +393,19 @@ public abstract class Tuple4f implements java.io.Serializable, Cloneable {
        float diff;
 
        diff = x - t1.x;
+       if(Float.isNaN(diff)) return false;
        if((diff<0?-diff:diff) > epsilon) return false;
 
        diff = y - t1.y;
+       if(Float.isNaN(diff)) return false;
        if((diff<0?-diff:diff) > epsilon) return false;
 
        diff = z - t1.z;
+       if(Float.isNaN(diff)) return false;
        if((diff<0?-diff:diff) > epsilon) return false;
 
        diff = w - t1.w;
+       if(Float.isNaN(diff)) return false;
        if((diff<0?-diff:diff) > epsilon) return false;
 
        return true;
@@ -679,4 +683,97 @@ public abstract class Tuple4f implements java.io.Serializable, Cloneable {
 	}
     }
 
+    /**
+	 * Get the <i>x</i> coordinate.
+	 * 
+	 * @return the <i>x</i> coordinate.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final float getX() {
+		return x;
+	}
+
+
+	/**
+	 * Set the <i>x</i> coordinate.
+	 * 
+	 * @param x  value to <i>x</i> coordinate.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setX(float x) {
+		this.x = x;
+	}
+
+
+	/**
+	 * Get the <i>y</i> coordinate.
+	 * 
+	 * @return the <i>y</i> coordinate.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final float getY() {
+		return y;
+	}
+
+
+	/**
+	 * Set the <i>y</i> coordinate.
+	 * 
+	 * @param y value to <i>y</i> coordinate.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setY(float y) {
+		this.y = y;
+	}
+
+	/**
+	 * Get the <i>z</i> coordinate.
+	 * 
+	 * @return the <i>z</i> coordinate.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final float getZ() {
+		return z;
+	}
+
+
+	/**
+	 * Set the <i>z</i> coordinate.
+	 * 
+	 * @param z value to <i>z</i> coordinate.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setZ(float z) {
+		this.z = z;
+	}
+
+
+	/**
+	 * Get the <i>w</i> coordinate.
+	 * 
+	 * @return the <i>w</i> coordinate.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final float getW() {
+		return w;
+	}
+
+
+	/**
+	 * Set the <i>w</i> coordinate.
+	 * 
+	 * @param w value to <i>w</i> coordinate.
+	 * 
+	 * @since vecmath 1.5
+	 */
+	public final void setW(float w) {
+		this.w = w;
+	}
 }
