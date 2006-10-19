@@ -14,7 +14,7 @@
  */
  -->
 
-<project name="vecmath-1.5.0" default="jar-opt" basedir=".">
+<project name="vecmath-1.5.0" default="jar-debug" basedir=".">
 
   <!-- Set global properties for this build -->
   <property name="src"     location="src"/>
@@ -169,7 +169,7 @@
   </target>
 
   <description>
-The following ant targets are available ("jar-opt" is the default):
+The following ant targets are available ("jar-debug" is the default):
 
       all           - execute targets jar-debug and dist
 
