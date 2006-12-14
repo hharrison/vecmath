@@ -14,13 +14,13 @@
  */
  -->
 
-<project name="vecmath-1.5.0" default="jar-debug" basedir=".">
+<project name="vecmath-1.5.1" default="jar-debug" basedir=".">
 
   <!-- Set global properties for this build -->
   <property name="src"     location="src"/>
   <property name="build"   location="build"/>
   <property name="dist"    location="dist"/>
-  <property name="version" value="1_5_0"/>
+  <property name="version" value="1_5_1"/>
   <property name="docname" value="vecmath-${version}-doc"/>
   
   <target name="echo">	
