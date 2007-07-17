@@ -3,7 +3,7 @@ Specification-Title: Java 3D API Specification
 Specification-Version: 1.5
 Specification-Vendor: Sun Microsystems, Inc.
 Implementation-Title: Java 3D Vecmath Runtime Environment
-Implementation-Version: 1.5.1
+Implementation-Version: 1.5.2
 Implementation-Vendor: Sun Microsystems, Inc.
 Extension-Name: javax.vecmath
 Implementation-Vendor-Id: com.sun
@@ -12,6 +12,6 @@ Bundle-Name: Vecmath Library
 Bundle-Vendor: Sun Microsystems
 Bundle-Localization: plugin
 Bundle-SymbolicName: javax.vecmath; singleton:=true
-Bundle-Version: 1.5.1
+Bundle-Version: 1.5.2
 Eclipse-AutoStart: true
 Export-Package: javax.vecmath
