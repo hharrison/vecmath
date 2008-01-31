@@ -12,8 +12,6 @@
 
 package javax.vecmath;
 
-import java.lang.Math;
-
 /**
  * A four-element axis angle represented by double-precision floating point 
  * x,y,z,angle components.  An axis angle is a rotation of angle (radians)
@@ -46,8 +44,9 @@ public class AxisAngle4d implements java.io.Serializable, Cloneable {
      */
     public	double	angle;
 
-     final static double EPS = 0.000001;
-
+    // Fixed to issue 538
+    final static double EPS = 1.0e-12;
+    
     /**
      * Constructs and initializes an AxisAngle4d from the specified 
      * x, y, z, and angle.

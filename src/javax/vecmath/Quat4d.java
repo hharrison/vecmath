@@ -12,8 +12,6 @@
 
 package javax.vecmath;
 
-import java.lang.Math;
-
 /**
  * A 4-element quaternion represented by double precision floating 
  * point x,y,z,w coordinates.  The quaternion is always normalized.
@@ -24,7 +22,8 @@ public class Quat4d extends Tuple4d implements java.io.Serializable {
   // Combatible with 1.1
   static final long serialVersionUID = 7577479888820201099L;
 
-  final static double EPS = 0.000001;
+  // Fixed to issue 538
+  final static double EPS = 1.0e-12;
   final static double EPS2 = 1.0e-30;
   final static double PIO2 = 1.57079632679;
 
