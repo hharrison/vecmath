@@ -1,17 +1,17 @@
 Manifest-Version: 1.0
-Specification-Title: Java 3D API Specification
+Specification-Title: @SPEC_TITLE@
 Specification-Version: 1.5
-Specification-Vendor: Sun Microsystems, Inc.
-Implementation-Title: Java 3D Vecmath Runtime Environment
-Implementation-Version: 1.5.2
-Implementation-Vendor: Sun Microsystems, Inc.
+Specification-Vendor: @SPEC_VENDOR@
+Implementation-Title: @IMPL_TITLE@
+Implementation-Version: @VERSION_BASE@
+Implementation-Vendor: @IMPL_VENDOR@
 Extension-Name: javax.vecmath
-Implementation-Vendor-Id: com.sun
+Implementation-Vendor-Id: @IMPL_VENDOR_ID@
 Bundle-ManifestVersion: 2
 Bundle-Name: Vecmath Library
-Bundle-Vendor: Sun Microsystems
+Bundle-Vendor: @IMPL_VENDOR@
 Bundle-Localization: plugin
 Bundle-SymbolicName: javax.vecmath; singleton:=true
-Bundle-Version: 1.5.2
+Bundle-Version: @VERSION_BASE@
 Eclipse-AutoStart: true
 Export-Package: javax.vecmath
