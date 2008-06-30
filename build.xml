@@ -14,7 +14,7 @@
  */
  -->
 
-<project name="vecmath-1.5.2" default="jar-debug" basedir=".">
+<project name="vecmath-1.5.3" default="jar-debug" basedir=".">
 
   <!-- *************************************** -->
   <!-- *** Begin build-specific properties *** -->
@@ -27,7 +27,7 @@
   * separated by "periods ("."). It should match the version base
   * defined in the j3d-core build.xml file.
   -->
-  <property name="version_base"       value="1.5.2"/>
+  <property name="version_base"       value="1.5.3"/>
 
   <!-- ************************************* -->
   <!-- *** End build-specific properties *** -->
@@ -38,7 +38,7 @@
   <property name="src"     location="src"/>
   <property name="build"   location="build"/>
   <property name="dist"    location="dist"/>
-  <property name="version" value="1_5_2"/>
+  <property name="version" value="1_5_3"/>
   <property name="docname" value="vecmath-${version}-doc"/>
   
   <property name="build.spec.title" value="3D Vector Math Package"/>
