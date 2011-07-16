@@ -31,8 +31,6 @@
 
 package javax.vecmath;
 
-import java.lang.Math;
-
 /**
  * A 2-element vector that is represented by single-precision floating 
  * point x,y coordinates.

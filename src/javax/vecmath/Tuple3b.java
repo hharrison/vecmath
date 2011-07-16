@@ -31,8 +31,6 @@
 
 package javax.vecmath;
 
-import java.lang.Math;
-
 /**
  * A three byte tuple.  Note that Java defines a byte as a signed integer
  * in the range [-128, 127]. However, colors are more typically

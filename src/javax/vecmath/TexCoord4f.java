@@ -31,8 +31,6 @@
 
 package javax.vecmath;
 
-import java.lang.Math;
-
 /**
  * A 4 element texture coordinate that is represented by single precision 
  * floating point x,y,z,w coordinates.

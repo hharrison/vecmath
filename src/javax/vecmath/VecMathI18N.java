@@ -31,7 +31,6 @@
 
 package javax.vecmath;
 
-import java.io.*;
 import java.util.*;
 
 
