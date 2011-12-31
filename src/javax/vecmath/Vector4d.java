@@ -31,7 +31,6 @@
 
 package javax.vecmath;
 
-import java.lang.Math;
 
 /**
  * A 4-element vector represented by double-precision floating point

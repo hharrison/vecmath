@@ -31,7 +31,6 @@
 
 package javax.vecmath;
 
-import java.lang.Math;
 
 /**
  * A generic 3-element tuple that is represented by double-precision

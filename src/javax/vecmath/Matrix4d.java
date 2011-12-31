@@ -31,7 +31,6 @@
 
 package javax.vecmath;
 
-import java.lang.Math;
 
 /**
  * A double precision floating point 4 by 4 matrix.

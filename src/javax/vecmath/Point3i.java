@@ -31,7 +31,6 @@
 
 package javax.vecmath;
 
-import java.lang.Math;
 
 /**
  * A 3 element point represented by signed integer x,y,z

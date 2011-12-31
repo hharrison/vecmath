@@ -31,7 +31,6 @@
 
 package javax.vecmath;
 
-import java.lang.Math;
 
 /**
  * A single precision floating point 3 by 3 matrix.

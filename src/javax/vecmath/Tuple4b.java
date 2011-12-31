@@ -31,7 +31,6 @@
 
 package javax.vecmath;
 
-import java.lang.Math;
 
 /**
  * A four byte tuple.  Note that Java defines a byte as a signed integer

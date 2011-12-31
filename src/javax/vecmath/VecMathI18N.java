@@ -31,8 +31,8 @@
 
 package javax.vecmath;
 
-import java.io.*;
-import java.util.*;
+import java.util.MissingResourceException;
+import java.util.ResourceBundle;
 
 
 class VecMathI18N {

@@ -31,7 +31,6 @@
 
 package javax.vecmath;
 
-import java.lang.Math;
 
 /**
  * A 4-element vector represented by single-precision floating point x,y,z,w
