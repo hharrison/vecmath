@@ -121,29 +121,29 @@ public abstract class Tuple3b implements java.io.Serializable, Cloneable {
      * @return a String with the values
      */
     public String toString()
-    {   
+    {
         return("("  + ((int)this.x & 0xff) +
 	       ", " + ((int)this.y & 0xff) +
 	       ", " + ((int)this.z & 0xff) + ")");
-    }   
-
- 
-   /**   
-     * Places the value of the x,y,z components of this Tuple3b
-     * into the array of length 3.
-     * @param t array of length 3 into which the component values are copied
-     */ 
-    public final void get(byte[] t)
-    {   
- 
-        t[0] = this.x;
-        t[1] = this.y;
-        t[2] = this.z;
-    }   
+    }
 
 
    /**
-     * Places the value of the x,y,z components of this tuple into 
+     * Places the value of the x,y,z components of this Tuple3b
+     * into the array of length 3.
+     * @param t array of length 3 into which the component values are copied
+     */
+    public final void get(byte[] t)
+    {
+
+        t[0] = this.x;
+        t[1] = this.y;
+        t[2] = this.z;
+    }
+
+
+   /**
+     * Places the value of the x,y,z components of this tuple into
      * the tuple t1.
      * @param t1  the tuple into which the values are placed
      */
@@ -156,37 +156,37 @@ public abstract class Tuple3b implements java.io.Serializable, Cloneable {
 
 
    /**
-     * Sets the value of the data members of this tuple to the value 
+     * Sets the value of the data members of this tuple to the value
      * of the argument tuple t1.
      * @param t1  the source tuple for the memberwise copy
-     */ 
+     */
     public final void set(Tuple3b t1)
-    {   
+    {
         this.x = t1.x;
         this.y = t1.y;
         this.z = t1.z;
-    }   
+    }
 
- 
+
    /**
-     * Sets the value of the x,y,z, data members of this tuple to the 
+     * Sets the value of the x,y,z, data members of this tuple to the
      * values in the array t of length 3.
      * @param t  array of length 3 which is the source for the memberwise copy
-     */ 
+     */
     public final void set(byte[] t)
-    {   
+    {
         this.x = t[0];
         this.y = t[1];
         this.z = t[2];
-    }   
+    }
 
- 
+
    /**
      * Returns true if all of the data members of tuple t1 are equal to
-     * the corresponding data members in this tuple. 
+     * the corresponding data members in this tuple.
      * @param t1  the tuple with which the comparison is made
      * @return  true or false
-     */ 
+     */
     public boolean equals(Tuple3b t1)
     {
         try {
@@ -201,7 +201,7 @@ public abstract class Tuple3b implements java.io.Serializable, Cloneable {
      * data members of t1 are equal to the corresponding data members in
      * this Tuple3b.
      * @param t1  the object with which the comparison is made
-     */ 
+     */
     public boolean equals(Object t1)
     {
         try {
@@ -220,13 +220,13 @@ public abstract class Tuple3b implements java.io.Serializable, Cloneable {
      * code value.  Two objects with different data members may return the
      * same hash value, although this is not likely.
      * @return the integer hash code value
-     */  
+     */
     public int hashCode() {
 	return ((((int)x & 0xff) <<  0) |
 		(((int)y & 0xff) <<  8) |
 		(((int)z & 0xff) << 16));
     }
-   
+
     /**
      * Creates a new object of the same class as this object.
      *
@@ -248,9 +248,9 @@ public abstract class Tuple3b implements java.io.Serializable, Cloneable {
 
     /**
 	 * Get <i>x</i>, the  first value.
-	 * 
+	 *
 	 * @return the first value.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final byte getX() {
@@ -260,9 +260,9 @@ public abstract class Tuple3b implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Set <i>x</i>, the first value.
-	 * 
-	 * @param x the first value to set. 
-	 * 
+	 *
+	 * @param x the first value to set.
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final void setX(byte x) {
@@ -272,9 +272,9 @@ public abstract class Tuple3b implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Get <i>y</i>, the second value.
-	 * 
-	 * @return the second value. 
-	 * 
+	 *
+	 * @return the second value.
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final byte getY() {
@@ -284,9 +284,9 @@ public abstract class Tuple3b implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Set <i>y</i>, the second value.
-	 * 
+	 *
 	 * @param y the second value to set.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final void setY(byte y) {
@@ -295,9 +295,9 @@ public abstract class Tuple3b implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Get <i>z</i>, the third value.
-	 * 
-	 * @return the third value. 
-	 * 
+	 *
+	 * @return the third value.
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final byte getZ() {
@@ -307,9 +307,9 @@ public abstract class Tuple3b implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Set <i>z</i>, the third value.
-	 * 
+	 *
 	 * @param z the third value to set.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final void setZ(byte z) {

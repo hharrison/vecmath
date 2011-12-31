@@ -3133,9 +3133,9 @@ static  double max3( double[] values) {
 
 	/**
 	 * Set the first matrix element in the first row.
-	 * 
+	 *
 	 * @param m00 The m00 to set.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final  void setM00(double m00) {
@@ -3144,9 +3144,9 @@ static  double max3( double[] values) {
 
 	/**
 	 * Get the second matrix element in the first row.
-	 * 
+	 *
 	 * @return Returns the m01.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final  double getM01() {
@@ -3155,9 +3155,9 @@ static  double max3( double[] values) {
 
 	/**
 	 * Set the second matrix element in the first row.
-	 * 
+	 *
 	 * @param m01 The m01 to set.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public  final void setM01(double m01) {
@@ -3166,9 +3166,9 @@ static  double max3( double[] values) {
 
 	/**
 	 * Get the third matrix element in the first row.
-	 * 
+	 *
 	 * @return Returns the m02.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final double getM02() {
@@ -3177,9 +3177,9 @@ static  double max3( double[] values) {
 
 	/**
 	 * Set the third matrix element in the first row.
-	 * 
+	 *
 	 * @param m02 The m02 to set.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final  void setM02(double m02) {
@@ -3188,9 +3188,9 @@ static  double max3( double[] values) {
 
 	/**
 	 * Get first matrix element in the second row.
-	 * 
+	 *
 	 * @return Returns the m10.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final  double getM10() {
@@ -3199,9 +3199,9 @@ static  double max3( double[] values) {
 
 	/**
 	 * Set first matrix element in the second row.
-	 * 
+	 *
 	 * @param m10 The m10 to set.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final  void setM10(double m10) {
@@ -3210,9 +3210,9 @@ static  double max3( double[] values) {
 
 	/**
 	 * Get second matrix element in the second row.
-	 * 
+	 *
 	 * @return Returns the m11.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final  double getM11() {
@@ -3221,9 +3221,9 @@ static  double max3( double[] values) {
 
 	/**
 	 * Set the second matrix element in the second row.
-	 * 
+	 *
 	 * @param m11 The m11 to set.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final  void setM11(double m11) {
@@ -3232,9 +3232,9 @@ static  double max3( double[] values) {
 
 	/**
 	 * Get the third matrix element in the second row.
-	 * 
+	 *
 	 * @return Returns the m12.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final  double getM12() {
@@ -3243,9 +3243,9 @@ static  double max3( double[] values) {
 
 	/**
 	 * Set the third matrix element in the second row.
-	 * 
+	 *
 	 * @param m12 The m12 to set.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final  void setM12(double m12) {
@@ -3254,9 +3254,9 @@ static  double max3( double[] values) {
 
 	/**
 	 * Get the first matrix element in the third row.
-	 * 
+	 *
 	 * @return Returns the m20.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final  double getM20() {
@@ -3265,9 +3265,9 @@ static  double max3( double[] values) {
 
 	/**
 	 * Set the first matrix element in the third row.
-	 * 
+	 *
 	 * @param m20 The m20 to set.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final void setM20(double m20) {
@@ -3276,9 +3276,9 @@ static  double max3( double[] values) {
 
 	/**
 	 * Get the second matrix element in the third row.
-	 * 
+	 *
 	 * @return Returns the m21.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final double getM21() {
@@ -3287,9 +3287,9 @@ static  double max3( double[] values) {
 
 	/**
 	 * Set the second matrix element in the third row.
-	 * 
+	 *
 	 * @param m21 The m21 to set.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final void setM21(double m21) {
@@ -3298,9 +3298,9 @@ static  double max3( double[] values) {
 
 	/**
 	 * Get the third matrix element in the third row .
-	 * 
+	 *
 	 * @return Returns the m22.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final double getM22() {
@@ -3309,9 +3309,9 @@ static  double max3( double[] values) {
 
 	/**
 	 * Set the third matrix element in the third row.
-	 * 
+	 *
 	 * @param m22 The m22 to set.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final void setM22(double m22) {

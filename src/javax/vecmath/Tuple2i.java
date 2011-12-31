@@ -459,9 +459,9 @@ public abstract class Tuple2i implements java.io.Serializable, Cloneable {
 
     /**
 	 * Get the <i>x</i> coordinate.
-	 * 
+	 *
 	 * @return the x coordinate.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final int getX() {
@@ -471,9 +471,9 @@ public abstract class Tuple2i implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Set the <i>x</i> coordinate.
-	 * 
+	 *
 	 * @param x  value to <i>x</i> coordinate.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final void setX(int x) {
@@ -483,9 +483,9 @@ public abstract class Tuple2i implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Get the <i>y</i> coordinate.
-	 * 
+	 *
 	 * @return  the <i>y</i> coordinate.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final int getY() {
@@ -495,9 +495,9 @@ public abstract class Tuple2i implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Set the <i>y</i> coordinate.
-	 * 
+	 *
 	 * @param y value to <i>y</i> coordinate.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final void setY(int y) {

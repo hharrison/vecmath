@@ -34,7 +34,7 @@ package javax.vecmath;
 import java.lang.Math;
 
 /**
- * A 3 element point that is represented by double precision floating point 
+ * A 3 element point that is represented by double precision floating point
  * x,y,z coordinates.
  *
  */
@@ -85,20 +85,20 @@ public class Point3d extends Tuple3d implements java.io.Serializable {
     }
 
 
-    /** 
-     * Constructs and initializes a Point3d from the specified Tuple3f. 
-     * @param t1 the Tuple3f containing the initialization x y z data 
-     */  
-    public Point3d(Tuple3f t1)  
-    { 
-       super(t1); 
+    /**
+     * Constructs and initializes a Point3d from the specified Tuple3f.
+     * @param t1 the Tuple3f containing the initialization x y z data
+     */
+    public Point3d(Tuple3f t1)
+    {
+       super(t1);
     }
- 
- 
-    /** 
-     * Constructs and initializes a Point3d from the specified Tuple3d.  
-     * @param t1 the Tuple3d containing the initialization x y z data 
-     */  
+
+
+    /**
+     * Constructs and initializes a Point3d from the specified Tuple3d.
+     * @param t1 the Tuple3d containing the initialization x y z data
+     */
     public Point3d(Tuple3d t1)
     {
        super(t1);
@@ -116,7 +116,7 @@ public class Point3d extends Tuple3d implements java.io.Serializable {
 
   /**
    * Returns the square of the distance between this point and point p1.
-   * @param p1 the other point 
+   * @param p1 the other point
    * @return the square of the distance
    */
   public final double distanceSquared(Point3d p1)
@@ -133,7 +133,7 @@ public class Point3d extends Tuple3d implements java.io.Serializable {
   /**
    * Returns the distance between this point and point p1.
    * @param p1 the other point
-   * @return the distance 
+   * @return the distance
    */
   public final double distance(Point3d p1)
     {
@@ -175,12 +175,12 @@ public class Point3d extends Tuple3d implements java.io.Serializable {
 
 
   /**
-    *  Multiplies each of the x,y,z components of the Point4d parameter 
-    *  by 1/w and places the projected values into this point. 
-    *  @param  p1  the source Point4d, which is not modified 
-    */   
+    *  Multiplies each of the x,y,z components of the Point4d parameter
+    *  by 1/w and places the projected values into this point.
+    *  @param  p1  the source Point4d, which is not modified
+    */
    public final void project(Point4d p1)
-   { 
+   {
      double oneOw;
 
      oneOw = 1/p1.w;
@@ -188,7 +188,7 @@ public class Point3d extends Tuple3d implements java.io.Serializable {
      y = p1.y*oneOw;
      z = p1.z*oneOw;
 
-   } 
+   }
 
 
 }

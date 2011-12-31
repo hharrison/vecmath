@@ -34,7 +34,7 @@ package javax.vecmath;
 import java.lang.Math;
 
 /**
- * A 4 element texture coordinate that is represented by single precision 
+ * A 4 element texture coordinate that is represented by single precision
  * floating point x,y,z,w coordinates.
  *
  * @since vecmath 1.3
@@ -81,8 +81,8 @@ public class TexCoord4f extends Tuple4f implements java.io.Serializable {
     /**
      * Constructs and initializes a TexCoord4f from the specified Tuple4f.
      * @param t1 the Tuple4f containing the initialization x y z w data
-     */ 
-    public TexCoord4f(Tuple4f t1) 
+     */
+    public TexCoord4f(Tuple4f t1)
     {
        super(t1);
     }
@@ -91,8 +91,8 @@ public class TexCoord4f extends Tuple4f implements java.io.Serializable {
     /**
      * Constructs and initializes a TexCoord4f from the specified Tuple4d.
      * @param t1 the Tuple4d containing the initialization x y z w data
-     */ 
-    public TexCoord4f(Tuple4d t1) 
+     */
+    public TexCoord4f(Tuple4d t1)
     {
        super(t1);
     }

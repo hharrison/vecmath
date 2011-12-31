@@ -34,7 +34,7 @@ package javax.vecmath;
 import java.lang.Math;
 
 /**
- * A 4 element unit quaternion represented by single precision floating 
+ * A 4 element unit quaternion represented by single precision floating
  * point x,y,z,w coordinates.  The quaternion is always normalized.
  *
  */
@@ -66,7 +66,7 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
   }
 
   /**
-   * Constructs and initializes a Quat4f from the array of length 4. 
+   * Constructs and initializes a Quat4f from the array of length 4.
    * @param q the array of length 4 containing xyzw in order
    */
   public Quat4f(float[] q)
@@ -100,12 +100,12 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
   }
 
 
-    /** 
-     * Constructs and initializes a Quat4f from the specified Tuple4f. 
-     * @param t1 the Tuple4f containing the initialization x y z w data 
-     */  
-    public Quat4f(Tuple4f t1)  
-    { 
+    /**
+     * Constructs and initializes a Quat4f from the specified Tuple4f.
+     * @param t1 the Tuple4f containing the initialization x y z w data
+     */
+    public Quat4f(Tuple4f t1)
+    {
       float mag;
       mag = (float)(1.0/Math.sqrt( t1.x*t1.x + t1.y*t1.y + t1.z*t1.z + t1.w*t1.w ));
       x =  t1.x*mag;
@@ -114,12 +114,12 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
       w =  t1.w*mag;
 
     }
- 
- 
-    /** 
-     * Constructs and initializes a Quat4f from the specified Tuple4d.  
-     * @param t1 the Tuple4d containing the initialization x y z w data 
-     */  
+
+
+    /**
+     * Constructs and initializes a Quat4f from the specified Tuple4d.
+     * @param t1 the Tuple4d containing the initialization x y z w data
+     */
     public Quat4f(Tuple4d t1)
     {
       double mag;
@@ -165,7 +165,7 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
 
   /**
    * Sets the value of this quaternion to the quaternion product of
-   * quaternions q1 and q2 (this = q1 * q2).  
+   * quaternions q1 and q2 (this = q1 * q2).
    * Note that this is safe for aliasing (e.g. this can be q1 or q2).
    * @param q1 the first quaternion
    * @param q2 the second quaternion
@@ -193,12 +193,12 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
 
  /**
    * Sets the value of this quaternion to the quaternion product of
-   * itself and q1 (this = this * q1).  
+   * itself and q1 (this = this * q1).
    * @param q1 the other quaternion
    */
   public final void mul(Quat4f q1)
   {
-      float     x, y, w; 
+      float     x, y, w;
 
        w = this.w*q1.w - this.x*q1.x - this.y*q1.y - this.z*q1.z;
        x = this.w*q1.x + q1.w*this.x + this.y*q1.z - this.z*q1.y;
@@ -207,24 +207,24 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
        this.w = w;
        this.x = x;
        this.y = y;
-  } 
+  }
 
 
- /** 
+ /**
    * Multiplies quaternion q1 by the inverse of quaternion q2 and places
-   * the value into this quaternion.  The value of both argument quaternions 
+   * the value into this quaternion.  The value of both argument quaternions
    * is preservered (this = q1 * q2^-1).
    * @param q1 the first quaternion
    * @param q2 the second quaternion
-   */ 
-  public final void mulInverse(Quat4f q1, Quat4f q2) 
-  {   
-      Quat4f  tempQuat = new Quat4f(q2);  
- 
-      tempQuat.inverse(); 
-      this.mul(q1, tempQuat); 
+   */
+  public final void mulInverse(Quat4f q1, Quat4f q2)
+  {
+      Quat4f  tempQuat = new Quat4f(q2);
+
+      tempQuat.inverse();
+      this.mul(q1, tempQuat);
   }
- 
+
 
 
  /**
@@ -234,7 +234,7 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
    * @param q1 the other quaternion
    */
   public final void mulInverse(Quat4f q1)
-  {  
+  {
       Quat4f  tempQuat = new Quat4f(q1);
 
       tempQuat.inverse();
@@ -264,8 +264,8 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
    */
   public final void inverse()
   {
-    float norm;  
- 
+    float norm;
+
     norm = 1.0f/(this.w*this.w + this.x*this.x + this.y*this.y + this.z*this.z);
     this.w *=  norm;
     this.x *= -norm;
@@ -329,7 +329,7 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
    * the passed matrix.
    * @param m1 the Matrix4f
    */
-   public final void set(Matrix4f m1) 
+   public final void set(Matrix4f m1)
    {
        float ww = 0.25f*(m1.m00 + m1.m11 + m1.m22 + m1.m33);
 
@@ -341,7 +341,7 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
 	       this.y = (m1.m02 - m1.m20)*ww;
 	       this.z = (m1.m10 - m1.m01)*ww;
 	       return;
-	   } 
+	   }
        } else {
 	   this.w = 0;
 	   this.x = 0;
@@ -352,7 +352,7 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
 
        this.w = 0;
        ww = -0.5f*(m1.m11 + m1.m22);
-       
+
        if (ww >= 0) {
 	   if (ww >= EPS2) {
 	       this.x = (float) Math.sqrt((double) ww);
@@ -367,7 +367,7 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
 	   this.z = 1;
 	   return;
        }
-     
+
        this.x = 0;
        ww = 0.5f*(1.0f - m1.m22);
 
@@ -376,7 +376,7 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
 	   this.z = m1.m21/(2.0f*this.y);
 	   return;
        }
-     
+
        this.y = 0;
        this.z = 1;
    }
@@ -417,14 +417,14 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
 		this.y = (float)(m1.m10*ww);
 		this.z = (float)(m1.m20*ww);
 		return;
-	    } 
+	    }
 	} else {
 	    this.x = 0;
 	    this.y = 0;
 	    this.z = 1;
 	    return;
 	}
-     
+
 	this.x = 0;
 	ww = 0.5*(1.0 - m1.m22);
 	if (ww >= EPS2) {
@@ -432,7 +432,7 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
 	    this.z = (float) (m1.m21/(2.0*(double)(this.y)));
 	    return;
 	}
-     
+
 	this.y = 0;
 	this.z = 1;
     }
@@ -488,7 +488,7 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
 	    this.z = m1.m21/(2.0f*this.y);
 	    return;
 	}
-     
+
 	this.y = 0;
 	this.z = 1;
     }
@@ -536,7 +536,7 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
 	    this.z = 1;
 	    return;
 	}
-     
+
 	this.x = 0;
 	ww = 0.5*(1.0 - m1.m22);
 	if (ww >= EPS2) {
@@ -544,7 +544,7 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
 	    this.z = (float) (m1.m21/(2.0*(double)(this.y)));
 	    return;
 	}
-     
+
 	this.y = 0;
 	this.z = 1;
     }
@@ -558,15 +558,15 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
     public final void set(AxisAngle4f a)
     {
 	float mag,amag;
-	// Quat = cos(theta/2) + sin(theta/2)(roation_axis) 
+	// Quat = cos(theta/2) + sin(theta/2)(roation_axis)
 	amag = (float)Math.sqrt( a.x*a.x + a.y*a.y + a.z*a.z);
 	if (amag < EPS ) {
 	    w = 0.0f;
 	    x = 0.0f;
 	    y = 0.0f;
 	    z = 0.0f;
-	} else {  
-	    amag = 1.0f/amag; 
+	} else {
+	    amag = 1.0f/amag;
 	    mag = (float)Math.sin(a.angle/2.0);
 	    w = (float)Math.cos(a.angle/2.0);
 	    x = a.x*amag*mag;
@@ -584,26 +584,26 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
     public final void set(AxisAngle4d a)
     {
 	float mag,amag;
-	// Quat = cos(theta/2) + sin(theta/2)(roation_axis) 
-	
+	// Quat = cos(theta/2) + sin(theta/2)(roation_axis)
+
 	amag = (float)(1.0/Math.sqrt( a.x*a.x + a.y*a.y + a.z*a.z));
-	
+
 	if (amag < EPS ) {
 	    w = 0.0f;
 	    x = 0.0f;
 	    y = 0.0f;
 	    z = 0.0f;
-	} else {  
-	    amag = 1.0f/amag; 
+	} else {
+	    amag = 1.0f/amag;
 	    mag = (float)Math.sin(a.angle/2.0);
 	    w = (float)Math.cos(a.angle/2.0);
 	    x = (float)a.x*amag*mag;
 	    y = (float)a.y*amag*mag;
 	    z = (float)a.z*amag*mag;
 	}
-	
+
     }
-    
+
 
     /**
      *  Performs a great circle interpolation between this quaternion
@@ -614,12 +614,12 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
      */
     public final void interpolate(Quat4f q1, float alpha) {
 	// From "Advanced Animation and Rendering Techniques"
-	// by Watt and Watt pg. 364, function as implemented appeared to be 
+	// by Watt and Watt pg. 364, function as implemented appeared to be
 	// incorrect.  Fails to choose the same quaternion for the double
 	// covering. Resulting in change of direction for rotations.
 	// Fixed function to negate the first quaternion in the case that the
-	// dot product of q1 and this is negative. Second case was not needed. 
-    
+	// dot product of q1 and this is negative. Second case was not needed.
+
      double dot,s1,s2,om,sinom;
 
      dot = x*q1.x + y*q1.y + z*q1.z + w*q1.w;
@@ -648,25 +648,25 @@ public class Quat4f extends Tuple4f implements java.io.Serializable {
 
 
 
-  /** 
+  /**
     *  Performs a great circle interpolation between quaternion q1
-    *  and quaternion q2 and places the result into this quaternion. 
+    *  and quaternion q2 and places the result into this quaternion.
     *  @param q1  the first quaternion
     *  @param q2  the second quaternion
-    *  @param alpha  the alpha interpolation parameter 
-    */   
-    public final void interpolate(Quat4f q1, Quat4f q2, float alpha) { 
+    *  @param alpha  the alpha interpolation parameter
+    */
+    public final void interpolate(Quat4f q1, Quat4f q2, float alpha) {
 	// From "Advanced Animation and Rendering Techniques"
-	// by Watt and Watt pg. 364, function as implemented appeared to be 
+	// by Watt and Watt pg. 364, function as implemented appeared to be
 	// incorrect.  Fails to choose the same quaternion for the double
 	// covering. Resulting in change of direction for rotations.
 	// Fixed function to negate the first quaternion in the case that the
-	// dot product of q1 and this is negative. Second case was not needed. 
+	// dot product of q1 and this is negative. Second case was not needed.
 
      double dot,s1,s2,om,sinom;
 
      dot = q2.x*q1.x + q2.y*q1.y + q2.z*q1.z + q2.w*q1.w;
-     
+
      if ( dot < 0 ) {
         // negate quaternion
        q1.x = -q1.x;  q1.y = -q1.y;  q1.z = -q1.z;  q1.w = -q1.w;

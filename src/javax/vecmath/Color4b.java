@@ -35,7 +35,7 @@ import java.awt.Color;
 
 
 /**
- * A four-byte color value represented by byte x, y, z, and w values. 
+ * A four-byte color value represented by byte x, y, z, and w values.
  * The x, y, z, and w values represent the red, green, blue, and alpha
  * values, respectively.
  * <p>

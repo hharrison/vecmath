@@ -34,7 +34,7 @@ package javax.vecmath;
 import java.lang.Math;
 
 /**
- * A 3 element point that is represented by single precision floating point 
+ * A 3 element point that is represented by single precision floating point
  * x,y,z coordinates.
  *
  */
@@ -89,8 +89,8 @@ public class Point3f extends Tuple3f implements java.io.Serializable {
     /**
      * Constructs and initializes a Point3f from the specified Tuple3f.
      * @param t1 the Tuple3f containing the initialization x y z data
-     */ 
-    public Point3f(Tuple3f t1) 
+     */
+    public Point3f(Tuple3f t1)
     {
        super(t1);
     }
@@ -99,8 +99,8 @@ public class Point3f extends Tuple3f implements java.io.Serializable {
     /**
      * Constructs and initializes a Point3f from the specified Tuple3d.
      * @param t1 the Tuple3d containing the initialization x y z data
-     */ 
-    public Point3f(Tuple3d t1) 
+     */
+    public Point3f(Tuple3d t1)
     {
        super(t1);
     }
@@ -116,7 +116,7 @@ public class Point3f extends Tuple3f implements java.io.Serializable {
 
 
  /**
-   * Computes the square of the distance between this point and 
+   * Computes the square of the distance between this point and
    * point p1.
    * @param p1 the other point
    * @return  the square of the distance
@@ -163,8 +163,8 @@ public class Point3f extends Tuple3f implements java.io.Serializable {
 
   /**
     * Computes the L-infinite distance between this point and
-    * point p1.  The L-infinite distance is equal to 
-    * MAX[abs(x1-x2), abs(y1-y2), abs(z1-z2)]. 
+    * point p1.  The L-infinite distance is equal to
+    * MAX[abs(x1-x2), abs(y1-y2), abs(z1-z2)].
     * @param p1 the other point
     * @return  the L-infinite distance
     */

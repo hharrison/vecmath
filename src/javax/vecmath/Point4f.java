@@ -34,7 +34,7 @@ package javax.vecmath;
 import java.lang.Math;
 
 /**
- * A 4 element point represented by single precision floating point x,y,z,w 
+ * A 4 element point represented by single precision floating point x,y,z,w
  * coordinates.
  *
  */
@@ -58,7 +58,7 @@ public class Point4f extends Tuple4f implements java.io.Serializable {
 
 
   /**
-   * Constructs and initializes a Point4f from the array of length 4. 
+   * Constructs and initializes a Point4f from the array of length 4.
    * @param p the array of length 4 containing xyzw in order
    */
   public Point4f(float[] p)
@@ -87,25 +87,25 @@ public class Point4f extends Tuple4f implements java.io.Serializable {
   }
 
 
-    /** 
-     * Constructs and initializes a Point4f from the specified Tuple4f. 
-     * @param t1 the Tuple4f containing the initialization x y z w data 
-     */  
-    public Point4f(Tuple4f t1)  
-    { 
-       super(t1); 
+    /**
+     * Constructs and initializes a Point4f from the specified Tuple4f.
+     * @param t1 the Tuple4f containing the initialization x y z w data
+     */
+    public Point4f(Tuple4f t1)
+    {
+       super(t1);
     }
- 
- 
-    /** 
-     * Constructs and initializes a Point4f from the specified Tuple4d.  
-     * @param t1 the Tuple4d containing the initialization x y z w data 
-     */  
+
+
+    /**
+     * Constructs and initializes a Point4f from the specified Tuple4d.
+     * @param t1 the Tuple4d containing the initialization x y z w data
+     */
     public Point4f(Tuple4d t1)
     {
        super(t1);
     }
- 
+
 
     /**
      * Constructs and initializes a Point4f from the specified Tuple3f.
@@ -205,19 +205,19 @@ public class Point4f extends Tuple4f implements java.io.Serializable {
        float t1, t2;
        t1 = Math.max( Math.abs(this.x-p1.x), Math.abs(this.y-p1.y));
        t2 = Math.max( Math.abs(this.z-p1.z), Math.abs(this.w-p1.w));
- 
+
        return(Math.max(t1,t2));
 
     }
 
   /**
-    *  Multiplies each of the x,y,z components of the Point4f parameter 
+    *  Multiplies each of the x,y,z components of the Point4f parameter
     *  by 1/w, places the projected values into this point, and places
-    *  a 1 as the w parameter of this point. 
-    *  @param  p1  the source Point4f, which is not modified 
-    */   
+    *  a 1 as the w parameter of this point.
+    *  @param  p1  the source Point4f, which is not modified
+    */
    public final void project(Point4f p1)
-   { 
+   {
      float oneOw;
 
      oneOw = 1/p1.w;
@@ -226,6 +226,6 @@ public class Point4f extends Tuple4f implements java.io.Serializable {
      z = p1.z*oneOw;
      w = 1.0f;
 
-   } 
+   }
 
 }

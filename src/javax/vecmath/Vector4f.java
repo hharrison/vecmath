@@ -34,7 +34,7 @@ package javax.vecmath;
 import java.lang.Math;
 
 /**
- * A 4-element vector represented by single-precision floating point x,y,z,w 
+ * A 4-element vector represented by single-precision floating point x,y,z,w
  * coordinates.
  *
  */
@@ -57,7 +57,7 @@ public class Vector4f extends Tuple4f implements java.io.Serializable {
 
 
   /**
-   * Constructs and initializes a Vector4f from the array of length 4. 
+   * Constructs and initializes a Vector4f from the array of length 4.
    * @param v the array of length 4 containing xyzw in order
    */
   public Vector4f(float[] v)
@@ -89,8 +89,8 @@ public class Vector4f extends Tuple4f implements java.io.Serializable {
     /**
      * Constructs and initializes a Vector4f from the specified Tuple4f.
      * @param t1 the Tuple4f containing the initialization x y z w data
-     */  
-    public Vector4f(Tuple4f t1) 
+     */
+    public Vector4f(Tuple4f t1)
     {
        super(t1);
     }
@@ -98,11 +98,11 @@ public class Vector4f extends Tuple4f implements java.io.Serializable {
 
     /**
      * Constructs and initializes a Vector4f from the specified Tuple4d.
-     * @param t1 the Tuple4d containing the initialization x y z w data 
-     */  
-    public Vector4f(Tuple4d t1) 
+     * @param t1 the Tuple4d containing the initialization x y z w data
+     */
+    public Vector4f(Tuple4d t1)
     {
-       super(t1); 
+       super(t1);
     }
 
 
@@ -210,19 +210,19 @@ public class Vector4f extends Tuple4f implements java.io.Serializable {
   }
 
 
-  /** 
-    *   Returns the (4-space) angle in radians between this vector and 
-    *   the vector parameter; the return value is constrained to the 
-    *   range [0,PI]. 
-    *   @param v1    the other vector 
-    *   @return   the angle in radians in the range [0,PI] 
-    */   
-   public final float angle(Vector4f v1) 
-   { 
+  /**
+    *   Returns the (4-space) angle in radians between this vector and
+    *   the vector parameter; the return value is constrained to the
+    *   range [0,PI].
+    *   @param v1    the other vector
+    *   @return   the angle in radians in the range [0,PI]
+    */
+   public final float angle(Vector4f v1)
+   {
       double vDot = this.dot(v1) / ( this.length()*v1.length() );
       if( vDot < -1.0) vDot = -1.0;
       if( vDot >  1.0) vDot =  1.0;
       return((float) (Math.acos( vDot )));
-   } 
+   }
 
 }

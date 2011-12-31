@@ -40,7 +40,7 @@ import java.awt.Color;
  * respectively.
  * <p>
  * Note that Java defines a byte as a signed integer in the range
- * [-128, 127]. However, colors are more typically represented by values 
+ * [-128, 127]. However, colors are more typically represented by values
  * in the range [0, 255]. Java 3D recognizes this and for color
  * treats the bytes as if the range were [0, 255]---in other words, as
  * if the bytes were unsigned.

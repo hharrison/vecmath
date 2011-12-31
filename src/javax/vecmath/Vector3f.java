@@ -34,7 +34,7 @@ package javax.vecmath;
 import java.lang.Math;
 
 /**
- * A 3-element vector that is represented by single-precision floating point 
+ * A 3-element vector that is represented by single-precision floating point
  * x,y,z coordinates.  If this value represents a normal, then it should
  * be normalized.
  *
@@ -89,7 +89,7 @@ public class Vector3f extends Tuple3f implements java.io.Serializable {
     /**
      * Constructs and initializes a Vector3f from the specified Tuple3f.
      * @param t1 the Tuple3f containing the initialization x y z data
-     */  
+     */
     public Vector3f(Tuple3f t1) {
        super(t1);
     }
@@ -98,7 +98,7 @@ public class Vector3f extends Tuple3f implements java.io.Serializable {
     /**
      * Constructs and initializes a Vector3f from the specified Tuple3d.
      * @param t1 the Tuple3d containing the initialization x y z data
-     */  
+     */
     public Vector3f(Tuple3d t1) {
        super(t1);
     }
@@ -188,18 +188,18 @@ public class Vector3f extends Tuple3f implements java.io.Serializable {
     }
 
 
-  /** 
+  /**
     *   Returns the angle in radians between this vector and the vector
-    *   parameter; the return value is constrained to the range [0,PI]. 
-    *   @param v1    the other vector 
-    *   @return   the angle in radians in the range [0,PI] 
-    */   
-   public final float angle(Vector3f v1) 
-   { 
+    *   parameter; the return value is constrained to the range [0,PI].
+    *   @param v1    the other vector
+    *   @return   the angle in radians in the range [0,PI]
+    */
+   public final float angle(Vector3f v1)
+   {
       double vDot = this.dot(v1) / ( this.length()*v1.length() );
       if( vDot < -1.0) vDot = -1.0;
       if( vDot >  1.0) vDot =  1.0;
       return((float) (Math.acos( vDot )));
-   } 
+   }
 
 }

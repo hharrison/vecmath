@@ -34,7 +34,7 @@ package javax.vecmath;
 import java.lang.Math;
 
 /**
- * A 4 element tuple represented by double precision floating point 
+ * A 4 element tuple represented by double precision floating point
  * x,y,z,w coordinates.
  *
  */
@@ -229,7 +229,7 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
     }
 
 
-    /**  
+    /**
      * Sets the value of this tuple to the sum of itself and tuple t1.
      * @param t1 the other tuple
      */
@@ -257,13 +257,13 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
     }
 
 
-    /**  
+    /**
      * Sets the value of this tuple to the difference of itself
      * and tuple t1 (this = this - t1).
      * @param t1 the other tuple
      */
    public final void sub(Tuple4d t1)
-    { 
+    {
         this.x -= t1.x;
         this.y -= t1.y;
         this.z -= t1.z;
@@ -341,35 +341,35 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
     }
 
 
- 
+
     /**
      * @deprecated Use scaleAdd(double,Tuple4d) instead
-     */  
+     */
     public final void scaleAdd(float s, Tuple4d t1) {
 	scaleAdd((double)s, t1);
     }
 
 
-    /** 
+    /**
      * Sets the value of this tuple to the scalar multiplication
      * of itself and then adds tuple t1 (this = s*this + t1).
-     * @param s the scalar value 
-     * @param t1 the tuple to be added 
-     */   
+     * @param s the scalar value
+     * @param t1 the tuple to be added
+     */
     public final void scaleAdd(double s, Tuple4d t1) {
-        this.x = s*this.x + t1.x; 
-        this.y = s*this.y + t1.y; 
-        this.z = s*this.z + t1.z; 
+        this.x = s*this.x + t1.x;
+        this.y = s*this.y + t1.y;
+        this.z = s*this.z + t1.z;
         this.w = s*this.w + t1.w;
-    } 
- 
+    }
+
 
 
    /**
      * Returns a string that contains the values of this Tuple4d.
      * The form is (x,y,z,w).
      * @return the String representation
-     */  
+     */
     public String toString() {
         return "(" + this.x + ", " + this.y + ", " + this.z + ", " + this.w + ")";
     }
@@ -380,7 +380,7 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
      * equal to the corresponding data members in this Tuple4d.
      * @param t1  the tuple with which the comparison is made
      * @return  true or false
-     */  
+     */
     public boolean equals(Tuple4d t1)
     {
         try {
@@ -402,7 +402,7 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
         try {
 
            Tuple4d t2 = (Tuple4d) t1;
-           return(this.x == t2.x && this.y == t2.y && 
+           return(this.x == t2.x && this.y == t2.y &&
                   this.z == t2.z && this.w == t2.w);
         }
         catch (NullPointerException e2) {return false;}
@@ -412,12 +412,12 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
 
    /**
      * Returns true if the L-infinite distance between this tuple
-     * and tuple t1 is less than or equal to the epsilon parameter, 
+     * and tuple t1 is less than or equal to the epsilon parameter,
      * otherwise returns false.  The L-infinite
-     * distance is equal to 
+     * distance is equal to
      * MAX[abs(x1-x2), abs(y1-y2), abs(z1-z2), abs(w1-w2)].
      * @param t1  the tuple to be compared to this tuple
-     * @param epsilon  the threshold value  
+     * @param epsilon  the threshold value
      * @return  true or false
      */
     public boolean epsilonEquals(Tuple4d t1, double epsilon)
@@ -452,7 +452,7 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
      * code value.  Two objects with different data members may return the
      * same hash value, although this is not likely.
      * @return the integer hash code value
-     */  
+     */
     public int hashCode() {
 	long bits = 1L;
 	bits = 31L * bits + VecMathUtil.doubleToLongBits(x);
@@ -472,10 +472,10 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
 
 
     /**
-     *  Clamps the tuple parameter to the range [low, high] and 
-     *  places the values into this tuple.  
+     *  Clamps the tuple parameter to the range [low, high] and
+     *  places the values into this tuple.
      *  @param min   the lowest value in the tuple after clamping
-     *  @param max  the highest value in the tuple after clamping 
+     *  @param max  the highest value in the tuple after clamping
      *  @param t   the source tuple, which will not be modified
      */
     public final void clamp(double min, double max, Tuple4d t) {
@@ -483,10 +483,10 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
           x = max;
         } else if( t.x < min ){
           x = min;
-        } else { 
+        } else {
           x = t.x;
         }
- 
+
         if( t.y > max ) {
           y = max;
         } else if( t.y < min ){
@@ -494,7 +494,7 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
         } else {
           y = t.y;
         }
- 
+
         if( t.z > max ) {
           z = max;
         } else if( t.z < min ){
@@ -522,38 +522,38 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
     }
 
 
-    /** 
-     *  Clamps the minimum value of the tuple parameter to the min 
+    /**
+     *  Clamps the minimum value of the tuple parameter to the min
      *  parameter and places the values into this tuple.
-     *  @param min   the lowest value in the tuple after clamping 
+     *  @param min   the lowest value in the tuple after clamping
      *  @param t   the source tuple, which will not be modified
-     */   
-    public final void clampMin(double min, Tuple4d t) { 
+     */
+    public final void clampMin(double min, Tuple4d t) {
         if( t.x < min ) {
           x = min;
         } else {
           x = t.x;
         }
- 
+
         if( t.y < min ) {
           y = min;
         } else {
           y = t.y;
         }
- 
+
         if( t.z < min ) {
           z = min;
         } else {
           z = t.z;
         }
- 
+
         if( t.w < min ) {
           w = min;
         } else {
           w = t.w;
         }
 
-   } 
+   }
 
 
     /**
@@ -564,45 +564,45 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
     }
 
 
-    /**  
-     *  Clamps the maximum value of the tuple parameter to the max 
+    /**
+     *  Clamps the maximum value of the tuple parameter to the max
      *  parameter and places the values into this tuple.
-     *  @param max   the highest value in the tuple after clamping  
+     *  @param max   the highest value in the tuple after clamping
      *  @param t   the source tuple, which will not be modified
-     */    
-    public final void clampMax(double max, Tuple4d t) {  
+     */
+    public final void clampMax(double max, Tuple4d t) {
         if( t.x > max ) {
           x = max;
         } else {
           x = t.x;
         }
- 
+
         if( t.y > max ) {
           y = max;
         } else {
           y = t.y;
         }
- 
+
         if( t.z > max ) {
           z = max;
         } else {
           z = t.z;
         }
- 
+
         if( t.w > max ) {
           w = max;
         } else {
           w = t.z;
         }
 
-   } 
+   }
 
 
-  /**  
-    *  Sets each component of the tuple parameter to its absolute 
+  /**
+    *  Sets each component of the tuple parameter to its absolute
     *  value and places the modified values into this tuple.
     *  @param t   the source tuple, which will not be modified
-    */    
+    */
   public final void absolute(Tuple4d t)
   {
        x = Math.abs(t.x);
@@ -610,7 +610,7 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
        z = Math.abs(t.z);
        w = Math.abs(t.w);
 
-  } 
+  }
 
 
 
@@ -633,19 +633,19 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
         } else if( x < min ){
           x = min;
         }
- 
+
         if( y > max ) {
           y = max;
         } else if( y < min ){
           y = min;
         }
- 
+
         if( z > max ) {
           z = max;
         } else if( z < min ){
           z = min;
         }
- 
+
         if( w > max ) {
           w = max;
         } else if( w < min ){
@@ -654,7 +654,7 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
 
    }
 
- 
+
     /**
      * @deprecated Use clampMin(double) instead
      */
@@ -667,14 +667,14 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
      *  Clamps the minimum value of this tuple to the min parameter.
      *  @param min   the lowest value in this tuple after clamping
      */
-    public final void clampMin(double min) { 
+    public final void clampMin(double min) {
       if( x < min ) x=min;
       if( y < min ) y=min;
       if( z < min ) z=min;
       if( w < min ) w=min;
-   } 
- 
- 
+   }
+
+
     /**
      * @deprecated Use clampMax(double) instead
      */
@@ -687,7 +687,7 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
      *  Clamps the maximum value of this tuple to the max parameter.
      *  @param max   the highest value in the tuple after clamping
      */
-    public final void clampMax(double max) { 
+    public final void clampMax(double max) {
       if( x > max ) x=max;
       if( y > max ) y=max;
       if( z > max ) z=max;
@@ -718,20 +718,20 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
 
 
     /**
-     *  Linearly interpolates between tuples t1 and t2 and places the 
+     *  Linearly interpolates between tuples t1 and t2 and places the
      *  result into this tuple:  this = (1-alpha)*t1 + alpha*t2.
      *  @param t1  the first tuple
-     *  @param t2  the second tuple  
-     *  @param alpha  the alpha interpolation parameter  
-     */   
+     *  @param t2  the second tuple
+     *  @param alpha  the alpha interpolation parameter
+     */
     public void interpolate(Tuple4d t1, Tuple4d t2, double alpha) {
 	this.x = (1-alpha)*t1.x + alpha*t2.x;
 	this.y = (1-alpha)*t1.y + alpha*t2.y;
 	this.z = (1-alpha)*t1.z + alpha*t2.z;
 	this.w = (1-alpha)*t1.w + alpha*t2.w;
-    } 
- 
- 
+    }
+
+
     /**
      * @deprecated Use interpolate(Tuple4d,double) instead
      */
@@ -741,11 +741,11 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
 
 
     /**
-     *  Linearly interpolates between this tuple and tuple t1 and 
-     *  places the result into this tuple: this = (1-alpha)*this + alpha*t1. 
-     *  @param t1  the first tuple 
-     *  @param alpha  the alpha interpolation parameter   
-     */    
+     *  Linearly interpolates between this tuple and tuple t1 and
+     *  places the result into this tuple: this = (1-alpha)*this + alpha*t1.
+     *  @param t1  the first tuple
+     *  @param alpha  the alpha interpolation parameter
+     */
     public void interpolate(Tuple4d t1, double alpha) {
 	this.x = (1-alpha)*this.x + alpha*t1.x;
 	this.y = (1-alpha)*this.y + alpha*t1.y;
@@ -773,9 +773,9 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
 
     /**
 	 * Get the <i>x</i> coordinate.
-	 * 
+	 *
 	 * @return the x coordinate.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final double getX() {
@@ -785,9 +785,9 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Set the <i>x</i> coordinate.
-	 * 
+	 *
 	 * @param x  value to <i>x</i> coordinate.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final void setX(double x) {
@@ -797,9 +797,9 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Get the <i>y</i> coordinate.
-	 * 
+	 *
 	 * @return  the <i>y</i> coordinate.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final double getY() {
@@ -809,9 +809,9 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Set the <i>y</i> coordinate.
-	 * 
+	 *
 	 * @param y value to <i>y</i> coordinate.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final void setY(double y) {
@@ -820,9 +820,9 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Get the <i>z</i> coordinate.
-	 * 
+	 *
 	 * @return the <i>z</i> coordinate.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final double getZ() {
@@ -832,9 +832,9 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Set the <i>z</i> coordinate.
-	 * 
+	 *
 	 * @param z value to <i>z</i> coordinate.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final void setZ(double z) {
@@ -844,9 +844,9 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Get the <i>w</i> coordinate.
-	 * 
+	 *
 	 * @return the <i>w</i> coordinate.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final double getW() {
@@ -856,9 +856,9 @@ public abstract class Tuple4d implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Set the <i>w</i> coordinate.
-	 * 
+	 *
 	 * @param w value to <i>w</i> coordinate.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final void setW(double w) {

@@ -34,7 +34,7 @@ package javax.vecmath;
 import java.lang.Math;
 
 /**
- * A 3 element texture coordinate that is represented by single precision 
+ * A 3 element texture coordinate that is represented by single precision
  * floating point x,y,z coordinates.
  *
  */
@@ -79,8 +79,8 @@ public class TexCoord3f extends Tuple3f implements java.io.Serializable {
     /**
      * Constructs and initializes a TexCoord3f from the specified Tuple3f.
      * @param t1 the Tuple3f containing the initialization x y z data
-     */ 
-    public TexCoord3f(Tuple3f t1) 
+     */
+    public TexCoord3f(Tuple3f t1)
     {
        super(t1);
     }
@@ -89,8 +89,8 @@ public class TexCoord3f extends Tuple3f implements java.io.Serializable {
     /**
      * Constructs and initializes a TexCoord3f from the specified Tuple3d.
      * @param t1 the Tuple3d containing the initialization x y z data
-     */ 
-    public TexCoord3f(Tuple3d t1) 
+     */
+    public TexCoord3f(Tuple3d t1)
     {
        super(t1);
     }

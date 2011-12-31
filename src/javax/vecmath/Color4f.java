@@ -35,9 +35,9 @@ import java.awt.Color;
 
 
 /**
- * A four-element color represented by single precision floating point 
+ * A four-element color represented by single precision floating point
  * x, y, z, and w values.  The x, y, z, and w values represent the red,
- * blue, green, and alpha color values, respectively. Color and alpha 
+ * blue, green, and alpha color values, respectively. Color and alpha
  * components should be in the range [0.0, 1.0].
  * <p>
  * Java 3D assumes that a linear (gamma-corrected) visual is used for

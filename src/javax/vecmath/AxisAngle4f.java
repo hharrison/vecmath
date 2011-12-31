@@ -34,7 +34,7 @@ package javax.vecmath;
 import java.lang.Math;
 
 /**
- * A four-element axis angle represented by single-precision floating point 
+ * A four-element axis angle represented by single-precision floating point
  * x,y,z,angle components.  An axis angle is a rotation of angle (radians)
  * about the vector (x,y,z).
  *
@@ -83,7 +83,7 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 
 
   /**
-   * Constructs and initializes an AxisAngle4f from the array of length 4. 
+   * Constructs and initializes an AxisAngle4f from the array of length 4.
    * @param a the array of length 4 containing x,y,z,angle in order
    */
   public AxisAngle4f(float[] a)
@@ -96,7 +96,7 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 
 
   /**
-   * Constructs and initializes an AxisAngle4f from the specified 
+   * Constructs and initializes an AxisAngle4f from the specified
    * AxisAngle4f.
    * @param a1 the AxisAngle4f containing the initialization x y z angle data
    */
@@ -123,7 +123,7 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 
 
     /**
-     * Constructs and initializes an AxisAngle4f from the specified 
+     * Constructs and initializes an AxisAngle4f from the specified
      * axis and angle.
      * @param axis the axis
      * @param angle the angle of rotation in radians
@@ -151,7 +151,7 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 
 
     /**
-     * Sets the value of this axis-angle to the specified x,y,z,angle. 
+     * Sets the value of this axis-angle to the specified x,y,z,angle.
      * @param x the x coordinate
      * @param y the y coordinate
      * @param z the z coordinate
@@ -207,7 +207,7 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 
 
     /**
-     * Sets the value of this AxisAngle4f to the specified 
+     * Sets the value of this AxisAngle4f to the specified
      * axis and angle.
      * @param axis the axis
      * @param angle the angle of rotation in radians
@@ -224,7 +224,7 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 
     /**
      * Copies the value of this axis-angle into the array a.
-     * @param a the array 
+     * @param a the array
      */
    public final void get(float[] a)
    {
@@ -232,7 +232,7 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
       a[1] = this.y;
       a[2] = this.z;
       a[3] = this.angle;
-   } 
+   }
 
 
     /**
@@ -244,16 +244,16 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
       */
     public final void set(Quat4f q1)
     {
-	double mag = q1.x*q1.x + q1.y*q1.y + q1.z*q1.z;  
+	double mag = q1.x*q1.x + q1.y*q1.y + q1.z*q1.z;
 
 	if ( mag > EPS ) {
 	    mag = Math.sqrt(mag);
 	    double invMag = 1.0/mag;
-	    
+
 	    x = (float)(q1.x*invMag);
 	    y = (float)(q1.y*invMag);
 	    z = (float)(q1.z*invMag);
-	    angle = (float)(2.0*Math.atan2(mag, q1.w)); 
+	    angle = (float)(2.0*Math.atan2(mag, q1.w));
         } else {
 	    x = 0.0f;
 	    y = 1.0f;
@@ -272,7 +272,7 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
       */
     public final void set(Quat4d q1)
     {
-        double mag = q1.x*q1.x + q1.y*q1.y + q1.z*q1.z;  
+        double mag = q1.x*q1.x + q1.y*q1.y + q1.z*q1.z;
 
         if (mag > EPS) {
 	    mag = Math.sqrt(mag);
@@ -281,7 +281,7 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 	    x = (float)(q1.x*invMag);
 	    y = (float)(q1.y*invMag);
 	    z = (float)(q1.z*invMag);
-	    angle = (float)(2.0*Math.atan2(mag, q1.w)); 
+	    angle = (float)(2.0*Math.atan2(mag, q1.w));
         } else {
 	    x = 0.0f;
 	    y = 1.0f;
@@ -354,7 +354,7 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 	    double sin = 0.5*mag;
 	    double cos = 0.5*(m3d.m00 + m3d.m11 + m3d.m22 - 1.0);
 	    angle = (float)Math.atan2(sin, cos);
-	    
+
 	    double invMag = 1.0/mag;
 	    x = (float)(x*invMag);
 	    y = (float)(y*invMag);
@@ -363,7 +363,7 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 	    x = 0.0f;
 	    y = 1.0f;
 	    z = 0.0f;
-	    angle = 0.0f;	    
+	    angle = 0.0f;
 	}
 
   }
@@ -386,9 +386,9 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 	    mag = Math.sqrt(mag);
 	    double sin = 0.5*mag;
 	    double cos = 0.5*(m1.m00 + m1.m11 + m1.m22 - 1.0);
-	    
+
 	    angle = (float)Math.atan2(sin, cos);
-	    
+
 	    double invMag = 1.0/mag;
 	    x = (float)(x*invMag);
 	    y = (float)(y*invMag);
@@ -397,7 +397,7 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 	    x = 0.0f;
 	    y = 1.0f;
 	    z = 0.0f;
-	    angle = 0.0f;	    
+	    angle = 0.0f;
 	}
 
   }
@@ -422,9 +422,9 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 	    mag = Math.sqrt(mag);
 	    double sin = 0.5*mag;
 	    double cos = 0.5*(m1.m00 + m1.m11 + m1.m22 - 1.0);
-	    
+
 	    angle = (float)Math.atan2(sin, cos);
-	    
+
 	    double invMag = 1.0/mag;
 	    x = (float)(x*invMag);
 	    y = (float)(y*invMag);
@@ -433,7 +433,7 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 	    x = 0.0f;
 	    y = 1.0f;
 	    z = 0.0f;
-	    angle = 0.0f;	    
+	    angle = 0.0f;
 	}
   }
 
@@ -442,7 +442,7 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
      * Returns a string that contains the values of this AxisAngle4f.
      * The form is (x,y,z,angle).
      * @return the String representation
-     */  
+     */
     public String toString() {
 	return "(" + this.x + ", " + this.y + ", " + this.z + ", " + this.angle + ")";
     }
@@ -453,7 +453,7 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
      * equal to the corresponding data members in this AxisAngle4f.
      * @param a1  the axis-angle with which the comparison is made
      * @return  true or false
-     */  
+     */
     public boolean equals(AxisAngle4f a1)
     {
         try {
@@ -470,7 +470,7 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
      * this AxisAngle4f.
      * @param o1  the object with which the comparison is made
      * @return  true or false
-      */  
+      */
     public boolean equals(Object o1)
     {
         try {
@@ -485,12 +485,12 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 
    /**
      * Returns true if the L-infinite distance between this axis-angle
-     * and axis-angle a1 is less than or equal to the epsilon parameter, 
+     * and axis-angle a1 is less than or equal to the epsilon parameter,
      * otherwise returns false.  The L-infinite
-     * distance is equal to 
+     * distance is equal to
      * MAX[abs(x1-x2), abs(y1-y2), abs(z1-z2), abs(angle1-angle2)].
-     * @param a1  the axis-angle to be compared to this axis-angle 
-     * @param epsilon  the threshold value  
+     * @param a1  the axis-angle to be compared to this axis-angle
+     * @param epsilon  the threshold value
      */
     public boolean epsilonEquals(AxisAngle4f a1, float epsilon)
     {
@@ -520,7 +520,7 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
      * code value.  Two objects with different data members may return the
      * same hash value, although this is not likely.
      * @return the integer hash code value
-     */  
+     */
     public int hashCode() {
 	long bits = 1L;
 	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(x);
@@ -551,10 +551,10 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 
     /**
 	 * Get the axis angle, in radians.<br>
-	 * An axis angle is a rotation angle about the vector (x,y,z). 
-	 * 
+	 * An axis angle is a rotation angle about the vector (x,y,z).
+	 *
 	 * @return Returns the angle, in radians.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final float getAngle() {
@@ -564,10 +564,10 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Set the axis angle, in radians.<br>
-	 * An axis angle is a rotation angle about the vector (x,y,z). 
-	 * 
+	 * An axis angle is a rotation angle about the vector (x,y,z).
+	 *
 	 * @param angle The angle to set, in radians.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final void setAngle(float angle) {
@@ -576,10 +576,10 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 
 
 	/**
-	 * Get value of <i>x</i> coordinate.  
-	 * 
+	 * Get value of <i>x</i> coordinate.
+	 *
 	 * @return the <i>x</i> coordinate.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final float getX() {
@@ -589,9 +589,9 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Set a new value for <i>x</i> coordinate.
-	 * 
+	 *
 	 * @param x the <i>x</i> coordinate.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final void setX(float x) {
@@ -601,9 +601,9 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Get value of <i>y</i> coordinate.
-	 * 
-	 * @return the <i>y</i> coordinate 
-	 * 
+	 *
+	 * @return the <i>y</i> coordinate
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final float getY() {
@@ -613,9 +613,9 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Set a new value for <i>y</i> coordinate.
-	 * 
+	 *
 	 * @param y the <i>y</i> coordinate.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final void setY(float y) {
@@ -625,9 +625,9 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Get  value of <i>z</i> coordinate.
-	 * 
+	 *
 	 * @return the <i>z</i> coordinate.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final float getZ() {
@@ -637,9 +637,9 @@ public class AxisAngle4f implements java.io.Serializable, Cloneable {
 
 	/**
 	 * Set a new value for <i>z</i> coordinate.
-	 * 
+	 *
 	 * @param z the <i>z</i> coordinate.
-	 * 
+	 *
 	 * @since vecmath 1.5
 	 */
 	public final void setZ(float z) {

@@ -34,7 +34,7 @@ package javax.vecmath;
 import java.lang.Math;
 
 /**
- * A 2-element vector that is represented by single-precision floating 
+ * A 2-element vector that is represented by single-precision floating
  * point x,y coordinates.
  *
  */
@@ -87,7 +87,7 @@ public class Vector2f extends Tuple2f implements java.io.Serializable {
     /**
      * Constructs and initializes a Vector2f from the specified Tuple2f.
      * @param t1 the Tuple2f containing the initialization x y data
-     */  
+     */
     public Vector2f(Tuple2f t1)
     {
        super(t1);
@@ -97,7 +97,7 @@ public class Vector2f extends Tuple2f implements java.io.Serializable {
     /**
      * Constructs and initializes a Vector2f from the specified Tuple2d.
      * @param t1 the Tuple2d containing the initialization x y data
-     */  
+     */
     public Vector2f(Tuple2d t1)
     {
        super(t1);
@@ -124,19 +124,19 @@ public class Vector2f extends Tuple2f implements java.io.Serializable {
     }
 
 
-    /**  
+    /**
      * Returns the length of this vector.
      * @return the length of this vector
-     */  
+     */
     public final float length()
     {
         return (float) Math.sqrt(this.x*this.x + this.y*this.y);
     }
 
-    /**  
+    /**
      * Returns the squared length of this vector.
      * @return the squared length of this vector
-     */  
+     */
     public final float lengthSquared()
     {
         return (this.x*this.x + this.y*this.y);
@@ -145,7 +145,7 @@ public class Vector2f extends Tuple2f implements java.io.Serializable {
     /**
      * Sets the value of this vector to the normalization of vector v1.
      * @param v1 the un-normalized vector
-     */  
+     */
     public final void normalize(Vector2f v1)
     {
         float norm;
@@ -157,7 +157,7 @@ public class Vector2f extends Tuple2f implements java.io.Serializable {
 
     /**
      * Normalizes this vector in place.
-     */  
+     */
     public final void normalize()
     {
         float norm;

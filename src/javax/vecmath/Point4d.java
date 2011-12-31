@@ -34,7 +34,7 @@ package javax.vecmath;
 import java.lang.Math;
 
 /**
- * A 4 element vector represented by double precision floating point 
+ * A 4 element vector represented by double precision floating point
  * x,y,z,w coordinates.
  *
  */
@@ -87,25 +87,25 @@ public class Point4d extends Tuple4d implements java.io.Serializable {
     }
 
 
-    /**  
-     * Constructs and initializes a Point4d from the specified Tuple4f.  
-     * @param t1 the Tuple4f containing the initialization x y z w data  
-     */  
-    public Point4d(Tuple4f t1)  
-    {    
-       super(t1);  
-    } 
-  
-  
-    /**  
-     * Constructs and initializes a Point4d from the specified Tuple4d.  
-     * @param t1 the Tuple4d containing the initialization x y z w data  
-     */   
-    public Point4d(Tuple4d t1) 
-    { 
-       super(t1); 
-    } 
-  
+    /**
+     * Constructs and initializes a Point4d from the specified Tuple4f.
+     * @param t1 the Tuple4f containing the initialization x y z w data
+     */
+    public Point4d(Tuple4f t1)
+    {
+       super(t1);
+    }
+
+
+    /**
+     * Constructs and initializes a Point4d from the specified Tuple4d.
+     * @param t1 the Tuple4d containing the initialization x y z w data
+     */
+    public Point4d(Tuple4d t1)
+    {
+       super(t1);
+    }
+
 
     /**
      * Constructs and initializes a Point4d from the specified Tuple3d.
@@ -203,18 +203,18 @@ public class Point4d extends Tuple4d implements java.io.Serializable {
 	double t1, t2;
 	t1 = Math.max( Math.abs(this.x-p1.x), Math.abs(this.y-p1.y));
 	t2 = Math.max( Math.abs(this.z-p1.z), Math.abs(this.w-p1.w));
- 
+
 	return Math.max(t1,t2);
     }
 
   /**
-    *  Multiplies each of the x,y,z components of the Point4d parameter 
+    *  Multiplies each of the x,y,z components of the Point4d parameter
     *  by 1/w, places the projected values into this point, and places
-    *  a 1 as the w parameter of this point. 
-    *  @param  p1  the source Point4d, which is not modified 
-    */   
+    *  a 1 as the w parameter of this point.
+    *  @param  p1  the source Point4d, which is not modified
+    */
    public final void project(Point4d p1)
-   { 
+   {
      double oneOw;
 
      oneOw = 1/p1.w;
@@ -223,7 +223,7 @@ public class Point4d extends Tuple4d implements java.io.Serializable {
      z = p1.z*oneOw;
      w = 1.0;
 
-   } 
+   }
 
 
 }

@@ -34,7 +34,7 @@ package javax.vecmath;
 import java.lang.Math;
 
 /**
- * A 3-element vector that is represented by double-precision floating point 
+ * A 3-element vector that is represented by double-precision floating point
  * x,y,z coordinates.  If this value represents a normal, then it should
  * be normalized.
  *
@@ -89,8 +89,8 @@ public class Vector3d extends Tuple3d implements java.io.Serializable {
     /**
      * Constructs and initializes a Vector3d from the specified Tuple3f.
      * @param t1 the Tuple3f containing the initialization x y z data
-     */  
-    public Vector3d(Tuple3f t1) 
+     */
+    public Vector3d(Tuple3f t1)
     {
        super(t1);
     }
@@ -98,11 +98,11 @@ public class Vector3d extends Tuple3d implements java.io.Serializable {
 
     /**
      * Constructs and initializes a Vector3d from the specified Tuple3d.
-     * @param t1 the Tuple3d containing the initialization x y z data 
-     */  
-    public Vector3d(Tuple3d t1) 
+     * @param t1 the Tuple3d containing the initialization x y z data
+     */
+    public Vector3d(Tuple3d t1)
     {
-       super(t1); 
+       super(t1);
     }
 
 
@@ -121,7 +121,7 @@ public class Vector3d extends Tuple3d implements java.io.Serializable {
      * @param v2 the second vector
      */
     public final void cross(Vector3d v1, Vector3d v2)
-    { 
+    {
         double x,y;
 
         x = v1.y*v2.z - v1.z*v2.y;
@@ -192,19 +192,19 @@ public class Vector3d extends Tuple3d implements java.io.Serializable {
     }
 
 
-  /** 
+  /**
     *   Returns the angle in radians between this vector and the vector
-    *   parameter; the return value is constrained to the range [0,PI]. 
-    *   @param v1    the other vector 
-    *   @return   the angle in radians in the range [0,PI] 
-    */   
-   public final double angle(Vector3d v1) 
-   { 
+    *   parameter; the return value is constrained to the range [0,PI].
+    *   @param v1    the other vector
+    *   @return   the angle in radians in the range [0,PI]
+    */
+   public final double angle(Vector3d v1)
+   {
       double vDot = this.dot(v1) / ( this.length()*v1.length() );
       if( vDot < -1.0) vDot = -1.0;
       if( vDot >  1.0) vDot =  1.0;
       return((double) (Math.acos( vDot )));
-   } 
- 
+   }
+
 
 }

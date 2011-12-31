@@ -34,7 +34,7 @@ package javax.vecmath;
 import java.lang.Math;
 
 /**
- * A 4-element vector represented by double-precision floating point 
+ * A 4-element vector represented by double-precision floating point
  * x,y,z,w coordinates.
  *
  */
@@ -86,19 +86,19 @@ public class Vector4d extends Tuple4d implements java.io.Serializable {
     /**
      * Constructs and initializes a Vector4d from the specified Tuple4f.
      * @param t1 the Tuple4f containing the initialization x y z w data
-     */  
-    public Vector4d(Tuple4f t1) 
+     */
+    public Vector4d(Tuple4f t1)
     {
        super(t1);
     }
 
     /**
      * Constructs and initializes a Vector4d from the specified Tuple4d.
-     * @param t1 the Tuple4d containing the initialization x y z w data 
-     */  
-    public Vector4d(Tuple4d t1) 
+     * @param t1 the Tuple4d containing the initialization x y z w data
+     */
+    public Vector4d(Tuple4d t1)
     {
-       super(t1); 
+       super(t1);
     }
 
 
@@ -124,7 +124,7 @@ public class Vector4d extends Tuple4d implements java.io.Serializable {
        super();
     }
 
-   
+
     /**
      * Sets the x,y,z components of this vector to the corresponding
      * components of tuple t1.  The w component of this vector
@@ -206,19 +206,19 @@ public class Vector4d extends Tuple4d implements java.io.Serializable {
     }
 
 
-  /** 
-    *   Returns the (4-space) angle in radians between this vector and 
-    *   the vector parameter; the return value is constrained to the 
-    *   range [0,PI]. 
-    *   @param v1    the other vector 
-    *   @return   the angle in radians in the range [0,PI] 
-    */   
-   public final double angle(Vector4d v1) 
-   { 
+  /**
+    *   Returns the (4-space) angle in radians between this vector and
+    *   the vector parameter; the return value is constrained to the
+    *   range [0,PI].
+    *   @param v1    the other vector
+    *   @return   the angle in radians in the range [0,PI]
+    */
+   public final double angle(Vector4d v1)
+   {
       double vDot = this.dot(v1) / ( this.length()*v1.length() );
       if( vDot < -1.0) vDot = -1.0;
       if( vDot >  1.0) vDot =  1.0;
       return((double) (Math.acos( vDot )));
-   } 
+   }
 
 }
