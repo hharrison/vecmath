@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<project name="vecmath" basedir="." default="jar">
+<project name="vecmath" basedir="." default="all">
 
   <property name="src.dir"       location="src"/>
   <property name="build.dir"     location="build"/>
@@ -79,4 +79,5 @@
     </javadoc>
   </target>
 
+  <target name="all" depends="jar,docs" />
 </project>
