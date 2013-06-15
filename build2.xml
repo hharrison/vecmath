@@ -6,6 +6,7 @@
   <property name="build.dir"     location="build"/>
   <property name="gen.dir"       location="${build.dir}/gen"/>
   <property name="class.dir"     location="${build.dir}/classes"/>
+  <property name="javadoc.dir"   location="${build.dir}/javadoc"/>
 
   <property name="version_base"             value="1.6.0"/>
   <property name="build.spec.title"         value="3D Vector Math Package"/>
@@ -67,4 +68,15 @@
     </zip>
 
   </target>
+
+  <target name="docs" depends="gen">
+    <mkdir dir="${javadoc.dir}"/>
+
+    <javadoc sourcepath="${src.dir}"
+	     packagenames="javax.vecmath.*"
+             destdir="${javadoc.dir}"
+             windowtitle="Vecmath ${version_base}">
+    </javadoc>
+  </target>
+
 </project>
