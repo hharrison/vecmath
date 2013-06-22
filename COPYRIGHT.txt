@@ -36,42 +36,42 @@ not limited to, the denied persons and specially designated nationals
 lists is strictly prohibited.
 
 Copyright 1996-2008 Sun Microsystems, Inc., 4150 Network Circle, Santa
-Clara, California 95054, Etats-Unis. Tous droits réservés.
+Clara, California 95054, Etats-Unis. Tous droits rÃ©servÃ©s.
 
-Sun Microsystems, Inc. détient les droits de propriété intellectuels
-relatifs à la technologie incorporée dans le produit qui est décrit
+Sun Microsystems, Inc. dÃ©tient les droits de propriÃ©tÃ© intellectuels
+relatifs Ã  la technologie incorporÃ©e dans le produit qui est dÃ©crit
 dans ce document. En particulier, et ce sans limitation, ces droits de
-propriété intellectuelle peuvent inclure un ou plus des brevets
-américains listés à l'adresse http://www.sun.com/patents et un ou les
-brevets supplémentaires ou les applications de brevet en attente aux
+propriÃ©tÃ© intellectuelle peuvent inclure un ou plus des brevets
+amÃ©ricains listÃ©s Ã  l'adresse http://www.sun.com/patents et un ou les
+brevets supplÃ©mentaires ou les applications de brevet en attente aux
 Etats - Unis et dans les autres pays.
 
 L'utilisation est soumise aux termes de la Licence.
 
-Cette distribution peut comprendre des composants développés par des
+Cette distribution peut comprendre des composants dÃ©veloppÃ©s par des
 tierces parties.
 
-Des parties de ce produit pourront être dérivées des systèmes Berkeley
-BSD licenciés par l'Université de Californie. UNIX est une marque
-déposée aux Etats-Unis et dans d'autres pays et licenciée
+Des parties de ce produit pourront Ãªtre dÃ©rivÃ©es des systÃ¨mes Berkeley
+BSD licenciÃ©s par l'UniversitÃ© de Californie. UNIX est une marque
+dÃ©posÃ©e aux Etats-Unis et dans d'autres pays et licenciÃ©e
 exclusivement par X/Open Company, Ltd.
 
 Sun, Sun Microsystems, le logo Sun, Java, Solaris, Java 3D, le logo
 100% Pure Java, le logo Duke et le logo Java Coffee Cup sont des
-marques de fabrique ou des marques déposées de Sun Microsystems,
+marques de fabrique ou des marques dÃ©posÃ©es de Sun Microsystems,
 Inc. aux Etats-Unis et dans d'autres pays.
 
-Ce produit est soumis à la législation américaine en matière de
-contrôle des exportations et peut être soumis à la règlementation en
+Ce produit est soumis Ã  la lÃ©gislation amÃ©ricaine en matiÃ¨re de
+contrÃ´le des exportations et peut Ãªtre soumis Ã  la rÃ¨glementation en
 vigueur dans d'autres pays dans le domaine des exportations et
 importations. Les utilisations, ou utilisateurs finaux, pour des armes
-nucléaires,des missiles, des armes biologiques et chimiques ou du
-nucléaire maritime, directement ou indirectement, sont strictement
-interdites. Les exportations ou réexportations vers les pays sous
-embargo américain, ou vers des entités figurant sur les listes
-d'exclusion d'exportation américaines, y compris, mais de manière non
+nuclÃ©aires,des missiles, des armes biologiques et chimiques ou du
+nuclÃ©aire maritime, directement ou indirectement, sont strictement
+interdites. Les exportations ou rÃ©exportations vers les pays sous
+embargo amÃ©ricain, ou vers des entitÃ©s figurant sur les listes
+d'exclusion d'exportation amÃ©ricaines, y compris, mais de maniÃ¨re non
 exhaustive, la liste de personnes qui font objet d'un ordre de ne pas
-participer, d'une façon directe ou indirecte, aux exportations des
-produits ou des services qui sont régis par la législation américaine
-en matière de contrôle des exportations et la liste de ressortissants
-spécifiquement désignés, sont rigoureusement interdites.
+participer, d'une faÃ§on directe ou indirecte, aux exportations des
+produits ou des services qui sont rÃ©gis par la lÃ©gislation amÃ©ricaine
+en matiÃ¨re de contrÃ´le des exportations et la liste de ressortissants
+spÃ©cifiquement dÃ©signÃ©s, sont rigoureusement interdites.
