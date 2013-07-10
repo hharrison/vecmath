@@ -663,10 +663,10 @@ public class GVector implements java.io.Serializable, Cloneable {
 	long bits = 1L;
 
 	for (int i = 0; i < length; i++) {
-	    bits = 31L * bits + VecMathUtil.doubleToLongBits(values[i]);
+		bits = VecMathUtil.hashDoubleBits(bits, values[i]);
 	}
 
-	return (int) (bits ^ (bits >> 32));
+	return VecMathUtil.hashFinish(bits);
     }
 
 

@@ -438,11 +438,11 @@ public abstract class Tuple4f implements java.io.Serializable, Cloneable {
     @Override
     public int hashCode() {
 	long bits = 1L;
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(x);
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(y);
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(z);
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(w);
-	return (int) (bits ^ (bits >> 32));
+	bits = VecMathUtil.hashFloatBits(bits, x);
+	bits = VecMathUtil.hashFloatBits(bits, y);
+	bits = VecMathUtil.hashFloatBits(bits, z);
+	bits = VecMathUtil.hashFloatBits(bits, w);
+	return VecMathUtil.hashFinish(bits);
     }
 
 

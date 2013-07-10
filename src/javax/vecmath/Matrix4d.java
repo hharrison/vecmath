@@ -3076,23 +3076,23 @@ public class Matrix4d implements java.io.Serializable, Cloneable {
     @Override
     public int hashCode() {
 	long bits = 1L;
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m00);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m01);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m02);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m03);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m10);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m11);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m12);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m13);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m20);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m21);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m22);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m23);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m30);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m31);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m32);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m33);
-	return (int) (bits ^ (bits >> 32));
+	bits = VecMathUtil.hashDoubleBits(bits, m00);
+	bits = VecMathUtil.hashDoubleBits(bits, m01);
+	bits = VecMathUtil.hashDoubleBits(bits, m02);
+	bits = VecMathUtil.hashDoubleBits(bits, m03);
+	bits = VecMathUtil.hashDoubleBits(bits, m10);
+	bits = VecMathUtil.hashDoubleBits(bits, m11);
+	bits = VecMathUtil.hashDoubleBits(bits, m12);
+	bits = VecMathUtil.hashDoubleBits(bits, m13);
+	bits = VecMathUtil.hashDoubleBits(bits, m20);
+	bits = VecMathUtil.hashDoubleBits(bits, m21);
+	bits = VecMathUtil.hashDoubleBits(bits, m22);
+	bits = VecMathUtil.hashDoubleBits(bits, m23);
+	bits = VecMathUtil.hashDoubleBits(bits, m30);
+	bits = VecMathUtil.hashDoubleBits(bits, m31);
+	bits = VecMathUtil.hashDoubleBits(bits, m32);
+	bits = VecMathUtil.hashDoubleBits(bits, m33);
+	return VecMathUtil.hashFinish(bits);
     }
 
 

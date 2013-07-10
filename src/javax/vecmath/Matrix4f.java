@@ -2836,23 +2836,23 @@ public class Matrix4f implements java.io.Serializable, Cloneable {
     @Override
     public int hashCode() {
 	long bits = 1L;
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m00);
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m01);
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m02);
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m03);
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m10);
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m11);
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m12);
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m13);
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m20);
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m21);
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m22);
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m23);
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m30);
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m31);
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m32);
-	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m33);
-	return (int) (bits ^ (bits >> 32));
+	bits = VecMathUtil.hashFloatBits(bits, m00);
+	bits = VecMathUtil.hashFloatBits(bits, m01);
+	bits = VecMathUtil.hashFloatBits(bits, m02);
+	bits = VecMathUtil.hashFloatBits(bits, m03);
+	bits = VecMathUtil.hashFloatBits(bits, m10);
+	bits = VecMathUtil.hashFloatBits(bits, m11);
+	bits = VecMathUtil.hashFloatBits(bits, m12);
+	bits = VecMathUtil.hashFloatBits(bits, m13);
+	bits = VecMathUtil.hashFloatBits(bits, m20);
+	bits = VecMathUtil.hashFloatBits(bits, m21);
+	bits = VecMathUtil.hashFloatBits(bits, m22);
+	bits = VecMathUtil.hashFloatBits(bits, m23);
+	bits = VecMathUtil.hashFloatBits(bits, m30);
+	bits = VecMathUtil.hashFloatBits(bits, m31);
+	bits = VecMathUtil.hashFloatBits(bits, m32);
+	bits = VecMathUtil.hashFloatBits(bits, m33);
+	return VecMathUtil.hashFinish(bits);
     }
 
 

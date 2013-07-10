@@ -290,9 +290,9 @@ public abstract class Tuple2d implements java.io.Serializable, Cloneable {
     @Override
     public int hashCode() {
 	long bits = 1L;
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(x);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(y);
-	return (int) (bits ^ (bits >> 32));
+	bits = VecMathUtil.hashDoubleBits(bits, x);
+	bits = VecMathUtil.hashDoubleBits(bits, y);
+	return VecMathUtil.hashFinish(bits);
     }
 
 

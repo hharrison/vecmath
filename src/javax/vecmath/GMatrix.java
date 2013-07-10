@@ -1388,16 +1388,16 @@ public class GMatrix implements java.io.Serializable, Cloneable {
     public int hashCode() {
 	long bits = 1L;
 
-	bits = 31L * bits + (long)nRow;
-	bits = 31L * bits + (long)nCol;
+	bits = VecMathUtil.hashLongBits(bits, nRow);
+	bits = VecMathUtil.hashLongBits(bits, nCol);
 
 	for (int i = 0; i < nRow; i++) {
-	    for (int j = 0; j < nCol; j++) {
-		bits = 31L * bits + VecMathUtil.doubleToLongBits(values[i][j]);
-	    }
+		for (int j = 0; j < nCol; j++) {
+			bits = VecMathUtil.hashDoubleBits(bits, values[i][j]);
+		}
 	}
 
-	return (int) (bits ^ (bits >> 32));
+	return VecMathUtil.hashFinish(bits);
     }
 
 

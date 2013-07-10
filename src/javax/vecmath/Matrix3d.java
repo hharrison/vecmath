@@ -1986,16 +1986,16 @@ public class Matrix3d implements java.io.Serializable, Cloneable {
     @Override
     public int hashCode() {
 	long bits = 1L;
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m00);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m01);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m02);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m10);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m11);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m12);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m20);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m21);
-	bits = 31L * bits + VecMathUtil.doubleToLongBits(m22);
-	return (int) (bits ^ (bits >> 32));
+	bits = VecMathUtil.hashDoubleBits(bits, m00);
+	bits = VecMathUtil.hashDoubleBits(bits, m01);
+	bits = VecMathUtil.hashDoubleBits(bits, m02);
+	bits = VecMathUtil.hashDoubleBits(bits, m10);
+	bits = VecMathUtil.hashDoubleBits(bits, m11);
+	bits = VecMathUtil.hashDoubleBits(bits, m12);
+	bits = VecMathUtil.hashDoubleBits(bits, m20);
+	bits = VecMathUtil.hashDoubleBits(bits, m21);
+	bits = VecMathUtil.hashDoubleBits(bits, m22);
+	return VecMathUtil.hashFinish(bits);
     }
 
 
