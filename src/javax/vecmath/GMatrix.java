@@ -1341,6 +1341,7 @@ public class GMatrix implements java.io.Serializable, Cloneable {
      * Returns a string that contains the values of this GMatrix.
      * @return the String representation
      */
+    @Override
     public String toString()
     {
 	StringBuffer buffer = new StringBuffer(nRow*nCol*8);
@@ -1383,6 +1384,7 @@ public class GMatrix implements java.io.Serializable, Cloneable {
      * likely.
      * @return the integer hash code value
      */
+    @Override
     public int hashCode() {
 	long bits = 1L;
 
@@ -1433,6 +1435,7 @@ public class GMatrix implements java.io.Serializable, Cloneable {
      * @param o1  The object with which the comparison is made.
      * @return  true or false
      */
+    @Override
     public boolean equals(Object o1)
     {
         try {
@@ -2979,6 +2982,7 @@ public class GMatrix implements java.io.Serializable, Cloneable {
      * @see java.lang.Cloneable
      * @since vecmath 1.3
      */
+    @Override
     public Object clone() {
 	GMatrix m1 = null;
 	try {

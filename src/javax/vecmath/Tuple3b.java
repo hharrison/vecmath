@@ -114,6 +114,7 @@ public abstract class Tuple3b implements java.io.Serializable, Cloneable {
      * Returns a string that contains the values of this Tuple3b.
      * @return a String with the values
      */
+    @Override
     public String toString()
     {
         return("("  + ((int)this.x & 0xff) +
@@ -196,6 +197,7 @@ public abstract class Tuple3b implements java.io.Serializable, Cloneable {
      * this Tuple3b.
      * @param t1  the object with which the comparison is made
      */
+    @Override
     public boolean equals(Object t1)
     {
         try {
@@ -215,6 +217,7 @@ public abstract class Tuple3b implements java.io.Serializable, Cloneable {
      * same hash value, although this is not likely.
      * @return the integer hash code value
      */
+    @Override
     public int hashCode() {
 	return ((((int)x & 0xff) <<  0) |
 		(((int)y & 0xff) <<  8) |
@@ -229,6 +232,7 @@ public abstract class Tuple3b implements java.io.Serializable, Cloneable {
      * @see java.lang.Cloneable
      * @since vecmath 1.3
      */
+    @Override
     public Object clone() {
 	// Since there are no arrays we can just use Object.clone()
 	try {

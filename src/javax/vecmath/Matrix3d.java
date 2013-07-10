@@ -205,6 +205,7 @@ public class Matrix3d implements java.io.Serializable, Cloneable {
      * Returns a string that contains the values of this Matrix3d.
      * @return the String representation
      */
+    @Override
     public String toString() {
       return
 	this.m00 + ", " + this.m01 + ", " + this.m02 + "\n" +
@@ -1916,6 +1917,7 @@ public class Matrix3d implements java.io.Serializable, Cloneable {
      * @param t1  the matrix with which the comparison is made
      * @return  true or false
      */
+    @Override
     public boolean equals(Object t1)
     {
         try {
@@ -1981,6 +1983,7 @@ public class Matrix3d implements java.io.Serializable, Cloneable {
      * same hash value, although this is not likely.
      * @return the integer hash code value
      */
+    @Override
     public int hashCode() {
 	long bits = 1L;
 	bits = 31L * bits + VecMathUtil.doubleToLongBits(m00);
@@ -3103,6 +3106,7 @@ static  double max3( double[] values) {
      * @see java.lang.Cloneable
      * @since vecmath 1.3
      */
+    @Override
     public Object clone() {
 	Matrix3d m1 = null;
 	try {

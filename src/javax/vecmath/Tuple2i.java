@@ -259,6 +259,7 @@ public abstract class Tuple2i implements java.io.Serializable, Cloneable {
      * The form is (x,y).
      * @return the String representation
      */
+    @Override
     public String toString() {
         return "(" + this.x + ", " + this.y + ")";
     }
@@ -270,6 +271,7 @@ public abstract class Tuple2i implements java.io.Serializable, Cloneable {
      * this Tuple2i.
      * @param t1  the object with which the comparison is made
      */
+    @Override
     public boolean equals(Object t1) {
         try {
 	    Tuple2i t2 = (Tuple2i) t1;
@@ -292,6 +294,7 @@ public abstract class Tuple2i implements java.io.Serializable, Cloneable {
      * same hash value, although this is not likely.
      * @return the integer hash code value
      */
+    @Override
     public int hashCode() {
 	long bits = 1L;
 	bits = 31L * bits + (long)x;
@@ -440,6 +443,7 @@ public abstract class Tuple2i implements java.io.Serializable, Cloneable {
      * @exception OutOfMemoryError if there is not enough memory.
      * @see java.lang.Cloneable
      */
+    @Override
     public Object clone() {
 	// Since there are no arrays we can just use Object.clone()
 	try {

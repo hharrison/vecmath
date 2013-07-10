@@ -208,6 +208,7 @@ public class Matrix3f implements java.io.Serializable, Cloneable {
      * Returns a string that contains the values of this Matrix3f.
      * @return the String representation
      */
+    @Override
     public String toString() {
       return
 	this.m00 + ", " + this.m01 + ", " + this.m02 + "\n" +
@@ -1913,6 +1914,7 @@ public class Matrix3f implements java.io.Serializable, Cloneable {
      * @param o1  the object with which the comparison is made
      * @return  true or false
      */
+    @Override
     public boolean equals(Object o1)
     {
       try {
@@ -1964,6 +1966,7 @@ public class Matrix3f implements java.io.Serializable, Cloneable {
      * same hash value, although this is not likely.
      * @return the integer hash code value
      */
+    @Override
     public int hashCode() {
 	long bits = 1L;
 	bits = 31L * bits + (long)VecMathUtil.floatToIntBits(m00);
@@ -2095,6 +2098,7 @@ public class Matrix3f implements java.io.Serializable, Cloneable {
      * @see java.lang.Cloneable
      * @since vecmath 1.3
      */
+    @Override
     public Object clone() {
 	Matrix3f m1 = null;
 	try {

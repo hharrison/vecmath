@@ -287,6 +287,7 @@ public abstract class Tuple2d implements java.io.Serializable, Cloneable {
      * same hash value, although this is not likely.
      * @return the integer hash code value
      */
+    @Override
     public int hashCode() {
 	long bits = 1L;
 	bits = 31L * bits + VecMathUtil.doubleToLongBits(x);
@@ -317,6 +318,7 @@ public abstract class Tuple2d implements java.io.Serializable, Cloneable {
      * @param t1  the object with which the comparison is made
      * @return  true or false
      */
+    @Override
     public boolean equals(Object t1)
     {
         try {
@@ -357,6 +359,7 @@ public abstract class Tuple2d implements java.io.Serializable, Cloneable {
      * The form is (x,y).
      * @return the String representation
      */
+   @Override
    public String toString()
    {
         return("(" + this.x + ", " + this.y + ")");
@@ -539,6 +542,7 @@ public abstract class Tuple2d implements java.io.Serializable, Cloneable {
      * @see java.lang.Cloneable
      * @since vecmath 1.3
      */
+    @Override
     public Object clone() {
 	// Since there are no arrays we can just use Object.clone()
 	try {
