@@ -32,7 +32,8 @@ package javax.vecmath;
  * point x,y,z coordinates.
  *
  */
-public abstract class Tuple3f implements java.io.Serializable, Cloneable {
+public abstract class Tuple3f extends Tuplef<Tuple3f>
+implements java.io.Serializable, Cloneable {
 
     static final long serialVersionUID=5019834619484343712L;
 
@@ -618,26 +619,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
 
 
   }
-
-    /**
-     * Creates a new object of the same class as this object.
-     *
-     * @return a clone of this instance.
-     * @exception OutOfMemoryError if there is not enough memory.
-     * @see java.lang.Cloneable
-     * @since vecmath 1.3
-     */
-    @Override
-    public Object clone() {
-	// Since there are no arrays we can just use Object.clone()
-	try {
-	    return super.clone();
-	} catch (CloneNotSupportedException e) {
-	    // this shouldn't happen, since we are Cloneable
-	    throw new InternalError();
-	}
-    }
-
 
     /**
 	 * Get the <i>x</i> coordinate.
