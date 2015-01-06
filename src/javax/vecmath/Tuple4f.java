@@ -32,8 +32,7 @@ package javax.vecmath;
  * coordinates.
  *
  */
-public abstract class Tuple4f extends Tuplef<Tuple4f>
-implements java.io.Serializable, Cloneable {
+public abstract class Tuple4f extends Tuplef<Tuple4f> {
 
   static final long serialVersionUID =  7068460319248845763L;
 

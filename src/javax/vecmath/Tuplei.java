@@ -2,6 +2,8 @@ package javax.vecmath;
 
 public abstract class Tuplei<T extends Tuplei<T>> extends Tuple<T> {
 
+	private static final long serialVersionUID = -7508116170295643350L;
+
 	public abstract void clamp(int min, int max);
 	public abstract void clamp(int min, int max, T t);
 	public abstract void clampMax(int max);

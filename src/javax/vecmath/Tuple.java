@@ -1,6 +1,9 @@
 package javax.vecmath;
 
-public abstract class Tuple<T extends Tuple<T>> {
+public abstract class Tuple<T extends Tuple<T>>
+implements java.io.Serializable, Cloneable {
+
+    private static final long serialVersionUID = 2172728256449529639L;
 
 	public abstract void absolute();
 	public abstract void absolute(T t);

@@ -32,7 +32,7 @@ package javax.vecmath;
  * floating point x,y coordinates.
  *
  */
-public abstract class Tuple2f extends Tuplef<Tuple2f> implements java.io.Serializable, Cloneable {
+public abstract class Tuple2f extends Tuplef<Tuple2f> {
 
     static final long serialVersionUID = 9011180388985266884L;
 

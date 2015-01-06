@@ -33,7 +33,7 @@ package javax.vecmath;
  *
  * @since vecmath 1.4
  */
-public abstract class Tuple2i extends Tuplei<Tuple2i> implements java.io.Serializable, Cloneable {
+public abstract class Tuple2i extends Tuplei<Tuple2i> {
 
     static final long serialVersionUID = -3555701650170169638L;
 

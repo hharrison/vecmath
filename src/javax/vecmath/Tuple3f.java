@@ -32,8 +32,7 @@ package javax.vecmath;
  * point x,y,z coordinates.
  *
  */
-public abstract class Tuple3f extends Tuplef<Tuple3f>
-implements java.io.Serializable, Cloneable {
+public abstract class Tuple3f extends Tuplef<Tuple3f> {
 
     static final long serialVersionUID=5019834619484343712L;
 

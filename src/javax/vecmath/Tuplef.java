@@ -2,6 +2,8 @@ package javax.vecmath;
 
 public abstract class Tuplef<T extends Tuplef<T>> extends Tuple<T> {
 
+	private static final long serialVersionUID = 8831086203906732583L;
+
 	public abstract void clamp(float min, float max);
 	public abstract void clamp(float min, float max, T t);
 	public abstract void clampMax(float max);
