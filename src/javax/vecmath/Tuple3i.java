@@ -312,6 +312,16 @@ public abstract class Tuple3i extends Tuplei<Tuple3i> {
     }
 
 
+    @Override
+    public boolean equals(Tuple3i t1) {
+        try {
+            return (this.x == t1.x && this.y == t1.y && this.z == t1.z);
+        } catch (NullPointerException e2) {
+            return false;
+        }
+    }
+
+
     /**
      * Returns a hash code value based on the data values in this
      * object.  Two different Tuple3i objects with identical data values

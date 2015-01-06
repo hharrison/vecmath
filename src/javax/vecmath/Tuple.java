@@ -16,6 +16,14 @@ implements java.io.Serializable, Cloneable {
 	public abstract void sub(T t1);
 	public abstract void sub(T t1, T t2);
 
+	/**
+	 * Returns true if the data members of t1 are equal to the corresponding
+	 * data members in this Tuple.
+	 * @param t1  the tuple with which the comparison is made
+	 * @return  true or false
+	 */
+	public abstract boolean equals(T t);
+
 	public Object clone() {
 		try {
 			return super.clone();
