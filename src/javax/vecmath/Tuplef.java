@@ -102,4 +102,21 @@ public abstract class Tuplef<T extends Tuplef<T>> extends Tuple<T> {
 	 */
 	public abstract void set(float[] t);
 
+	/**
+	 *  Linearly interpolates between this tuple and tuple t1 and
+	 *  places the result into this tuple:  this = (1-alpha)*this + alpha*t1.
+	 *  @param t1  the first tuple
+	 *  @param alpha  the alpha interpolation parameter
+	 */
+	public abstract void interpolate(T t1, float alpha);
+
+	/**
+	 *  Linearly interpolates between tuples t1 and t2 and places the
+	 *  result into this tuple:  this = (1-alpha)*t1 + alpha*t2.
+	 *  @param t1  the first tuple
+	 *  @param t2  the second tuple
+	 *  @param alpha  the alpha interpolation parameter
+	 */
+	public abstract void interpolate(T t1, T t2, float alpha);
+
 }

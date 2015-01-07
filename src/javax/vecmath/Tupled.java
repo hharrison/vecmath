@@ -102,4 +102,32 @@ public abstract class Tupled<T extends Tupled<T>> extends Tuple<T> {
 	 */
 	public abstract void set(double[] t);
 
+	/**
+	 * Returns true if the L-infinite distance between this tuple
+	 * and tuple t1 is less than or equal to the epsilon parameter,
+	 * otherwise returns false.  The L-infinite distance is equal to
+	 * MAX[abs(x1-x2), abs(y1-y2), abs(z1-z2)] for a tuple with 3 parts.
+	 * @param t1  the tuple to be compared to this tuple
+	 * @param epsilon  the threshold value
+	 * @return  true or false
+	 */
+	public abstract boolean epsilonEquals(T t, double epsilon);
+
+	/**
+	 *  Linearly interpolates between this tuple and tuple t1 and
+	 *  places the result into this tuple:  this = (1-alpha)*this + alpha*t1.
+	 *  @param t1  the first tuple
+	 *  @param alpha  the alpha interpolation parameter
+	 */
+	public abstract void interpolate(T t1, double alpha);
+
+	/**
+	 *  Linearly interpolates between tuples t1 and t2 and places the
+	 *  result into this tuple:  this = (1-alpha)*t1 + alpha*t2.
+	 *  @param t1  the first tuple
+	 *  @param t2  the second tuple
+	 *  @param alpha  the alpha interpolation parameter
+	 */
+	public abstract void interpolate(T t1, T t2, double alpha);
+
 }
