@@ -6,8 +6,6 @@ The copyright notice for this project is in COPYRIGHT.txt
 
 The source code license information for this project is in LICENSE.txt
 
-Instructions for building this project are in README-build.html
-
 Note that the source code in this directory is untested and presumed
 incompatible with the Java 3D(TM) API specification. You must only use
 this code in accordance with the terms under which the code is
