@@ -21,18 +21,6 @@
 
   <target name="gen">
     <mkdir dir="${gen.dir}"/>
-    <copy todir="${gen.dir}"  overwrite="true">
-      <fileset dir="${src.dir}" includes="VECMATH.MF"/>
-      <filterset>
-        <filter token="VERSION_BASE"    value="${version_base}"/>
-        <filter token="SPEC_TITLE"      value="${build.spec.title}"/>
-        <filter token="SPEC_VENDOR"     value="${build.spec.vendor}"/>
-        <filter token="IMPL_TITLE"      value="${build.impl.title}"/>
-        <filter token="IMPL_VENDOR"     value="${build.impl.vendor}"/>
-        <filter token="IMPL_VENDOR_ID"  value="${build.impl.vendor.id}"/>
-      </filterset>
-    </copy>
-
     <copy todir="${class.dir}/javax">
       <fileset dir="." includes="COPYRIGHT.txt"/>
       <fileset dir="." includes="LICENSE.txt"/>
@@ -56,8 +44,27 @@
   </target>
 
   <target name="jar" depends="compile">
-    <jar jarfile="${build.dir}/jars/vecmath.jar"  manifest="${gen.dir}/VECMATH.MF"
+    <jar jarfile="${build.dir}/jars/vecmath.jar"
          compress="false" update="yes">
+      <manifest>
+        <attribute name="Manifest-Version"          value="1.0"/>
+        <attribute name="Specification-Title"       value="${build.spec.title}"/>
+        <attribute name="Specification-Version"     value="1.6"/>
+        <attribute name="Specification-Vendor"      value="${build.spec.vendor}"/>
+        <attribute name="Implementation-Title"      value="${build.impl.title}"/>
+        <attribute name="Implementation-Version"    value="${version_base}"/>
+        <attribute name="Implementation-Vendor"     value="${build.impl.vendor}"/>
+        <attribute name="Extension-Name"            value="javax.vecmath"/>
+        <attribute name="Implementation-Vendor-Id"  value="${build.impl.vendor.id}"/>
+        <attribute name="Bundle-ManifestVersion"    value="2"/>
+        <attribute name="Bundle-Name"               value="Vecmath Library"/>
+        <attribute name="Bundle-Vendor"             value="${build.impl.vendor}"/>
+        <attribute name="Bundle-Localization"       value="plugin"/>
+        <attribute name="Bundle-SymbolicName"       value="javax.vecmath; singleton:=true"/>
+        <attribute name="Bundle-Version"            value="${version_base}"/>
+        <attribute name="Eclipse-AutoStart"         value="true"/>
+        <attribute name="Export-Package"            value="javax.vecmath"/>
+      </manifest>
       <fileset dir="${class.dir}"/>
     </jar>
 
