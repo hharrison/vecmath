@@ -4,7 +4,6 @@
 
   <property name="src.dir"       location="src"/>
   <property name="build.dir"     location="build"/>
-  <property name="gen.dir"       location="${build.dir}/gen"/>
   <property name="class.dir"     location="${build.dir}/classes"/>
   <property name="javadoc.dir"   location="${build.dir}/javadoc"/>
 
@@ -19,15 +18,7 @@
     <delete dir="${build.dir}"/>
   </target>
 
-  <target name="gen">
-    <mkdir dir="${gen.dir}"/>
-    <copy todir="${class.dir}/javax">
-      <fileset dir="." includes="COPYRIGHT.txt"/>
-      <fileset dir="." includes="LICENSE.txt"/>
-    </copy>
-  </target>
-
-  <target name="compile" depends="gen">
+  <target name="compile">
     <mkdir dir="${class.dir}"/>
 
     <javac srcdir="${src.dir}"  destdir="${class.dir}"
@@ -66,6 +57,8 @@
         <attribute name="Export-Package"            value="javax.vecmath"/>
       </manifest>
       <fileset dir="${class.dir}"/>
+      <fileset dir="." includes="COPYRIGHT.txt"/>
+      <fileset dir="." includes="LICENSE.txt"/>
     </jar>
 
     <zip destfile="${build.dir}/jars/vecmath-src.zip">
@@ -76,7 +69,7 @@
 
   </target>
 
-  <target name="docs" depends="gen">
+  <target name="docs">
     <mkdir dir="${javadoc.dir}"/>
 
     <javadoc sourcepath="${src.dir}"
