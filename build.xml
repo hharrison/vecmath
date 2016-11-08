@@ -73,7 +73,7 @@
     <mkdir dir="${javadoc.dir}"/>
 
     <javadoc sourcepath="${src.dir}"
-	     packagenames="javax.vecmath.*"
+             packagenames="javax.vecmath.*"
              destdir="${javadoc.dir}"
              windowtitle="Vecmath ${version_base}">
     </javadoc>
