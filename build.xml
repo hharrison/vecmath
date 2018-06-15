@@ -75,6 +75,7 @@
     <javadoc sourcepath="${src.dir}"
              packagenames="javax.vecmath.*"
              destdir="${javadoc.dir}"
+             additionalparam="-Xdoclint:none"
              windowtitle="Vecmath ${version_base}">
     </javadoc>
   </target>
