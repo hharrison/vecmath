@@ -36,7 +36,7 @@ package javax.vecmath;
  * bytes were unsigned.
  * Values greater than 127 can be assigned to a byte variable using a
  * type cast.  For example:
- * <ul>byteVariable = (byte) intValue; // intValue can be > 127</ul>
+ * <ul><li>byteVariable = (byte) intValue; // intValue can be &gt; 127</li></ul>
  * If intValue is greater than 127, then byteVariable will be negative.  The
  * correct value will be extracted when it is used (by masking off the upper
  * bits).

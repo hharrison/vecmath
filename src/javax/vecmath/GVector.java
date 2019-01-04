@@ -159,7 +159,7 @@ public class GVector implements java.io.Serializable, Cloneable {
      * Constructs a new GVector of the specified length and
      * initializes it by copying the specified number of elements from
      * the specified array.  The array must contain at least
-     * <code>length</code> elements (i.e., <code>vector.length</code> >=
+     * <code>length</code> elements (i.e., <code>vector.length</code> &ge;
      * <code>length</code>.  The length of this new GVector is set to
      * the specified length.
      * @param  vector   The array from which the values will be copied.
