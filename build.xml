@@ -7,7 +7,7 @@
   <property name="class.dir"     location="${build.dir}/classes"/>
   <property name="javadoc.dir"   location="${build.dir}/javadoc"/>
 
-  <property name="version_base"             value="1.6.1"/>
+  <property name="version_base"             value="1.6.2"/>
   <property name="build.spec.title"         value="3D Vector Math Package"/>
   <property name="build.spec.vendor"        value=""/>
   <property name="build.impl.title"         value="3D Vector Math Package"/>
