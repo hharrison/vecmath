@@ -33,7 +33,7 @@ package javax.vecmath;
  *
  * @since vecmath 1.2
  */
-public abstract class Tuple3i implements java.io.Serializable, Cloneable {
+public abstract class Tuple3i extends Tuplei<Tuple3i> {
 
     static final long serialVersionUID = -732740491767276200L;
 
@@ -312,6 +312,16 @@ public abstract class Tuple3i implements java.io.Serializable, Cloneable {
     }
 
 
+    @Override
+    public boolean equals(Tuple3i t1) {
+        try {
+            return (this.x == t1.x && this.y == t1.y && this.z == t1.z);
+        } catch (NullPointerException e2) {
+            return false;
+        }
+    }
+
+
     /**
      * Returns a hash code value based on the data values in this
      * object.  Two different Tuple3i objects with identical data values
@@ -496,26 +506,6 @@ public abstract class Tuple3i implements java.io.Serializable, Cloneable {
 	y = Math.abs(y);
 	z = Math.abs(z);
     }
-
-    /**
-     * Creates a new object of the same class as this object.
-     *
-     * @return a clone of this instance.
-     * @exception OutOfMemoryError if there is not enough memory.
-     * @see java.lang.Cloneable
-     * @since vecmath 1.3
-     */
-    @Override
-    public Object clone() {
-	// Since there are no arrays we can just use Object.clone()
-	try {
-	    return super.clone();
-	} catch (CloneNotSupportedException e) {
-	    // this shouldn't happen, since we are Cloneable
-	    throw new InternalError();
-	}
-    }
-
 
     /**
 	 * Get the <i>x</i> coordinate.

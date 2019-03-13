@@ -32,7 +32,7 @@ package javax.vecmath;
  * floating point x,y,z coordinates.
  *
  */
-public abstract class Tuple3d implements java.io.Serializable, Cloneable {
+public abstract class Tuple3d extends Tupled<Tuple3d> {
 
     static final long serialVersionUID = 5542096614926168415L;
 
@@ -663,25 +663,6 @@ public abstract class Tuple3d implements java.io.Serializable, Cloneable {
 	this.x = (1-alpha)*this.x + alpha*t1.x;
 	this.y = (1-alpha)*this.y + alpha*t1.y;
 	this.z = (1-alpha)*this.z + alpha*t1.z;
-    }
-
-    /**
-     * Creates a new object of the same class as this object.
-     *
-     * @return a clone of this instance.
-     * @exception OutOfMemoryError if there is not enough memory.
-     * @see java.lang.Cloneable
-     * @since vecmath 1.3
-     */
-    @Override
-    public Object clone() {
-	// Since there are no arrays we can just use Object.clone()
-	try {
-	    return super.clone();
-	} catch (CloneNotSupportedException e) {
-	    // this shouldn't happen, since we are Cloneable
-	    throw new InternalError();
-	}
     }
 
     /**

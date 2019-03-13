@@ -32,7 +32,7 @@ package javax.vecmath;
  * point x,y,z coordinates.
  *
  */
-public abstract class Tuple3f implements java.io.Serializable, Cloneable {
+public abstract class Tuple3f extends Tuplef<Tuple3f> {
 
     static final long serialVersionUID=5019834619484343712L;
 
@@ -138,11 +138,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
     }
 
 
-    /**
-     * Sets the value of this tuple to the xyz coordinates specified in
-     * the array of length 3.
-     * @param t the array of length 3 containing xyz in order
-     */
     public final void set(float[] t)
     {
 	this.x = t[0];
@@ -151,10 +146,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
     }
 
 
-    /**
-     * Sets the value of this tuple to the value of tuple t1.
-     * @param t1 the tuple to be copied
-     */
     public final void set(Tuple3f t1)
     {
 	this.x = t1.x;
@@ -175,10 +166,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
     }
 
 
-   /**
-     * Gets the value of this tuple and copies the values into t.
-     * @param t  the array of length 3 into which the values are copied
-     */
     public final void get(float[] t)
     {
        t[0] = this.x;
@@ -187,10 +174,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
     }
 
 
-   /**
-     * Gets the value of this tuple and copies the values into t.
-     * @param t  the Tuple3f object into which the values of this object are copied
-     */
     public final void get(Tuple3f t)
     {
        t.x = this.x;
@@ -199,11 +182,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
     }
 
 
-    /**
-     * Sets the value of this tuple to the vector sum of tuples t1 and t2.
-     * @param t1 the first tuple
-     * @param t2 the second tuple
-     */
     public final void add(Tuple3f t1, Tuple3f t2)
     {
 	this.x = t1.x + t2.x;
@@ -212,10 +190,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
     }
 
 
-    /**
-     * Sets the value of this tuple to the vector sum of itself and tuple t1.
-     * @param t1 the other tuple
-     */
     public final void add(Tuple3f t1)
     {
         this.x += t1.x;
@@ -224,12 +198,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
     }
 
 
-    /**
-     * Sets the value of this tuple to the vector difference
-     * of tuples t1 and t2 (this = t1 - t2).
-     * @param t1 the first tuple
-     * @param t2 the second tuple
-     */
     public final void sub(Tuple3f t1, Tuple3f t2)
     {
 	this.x = t1.x - t2.x;
@@ -238,11 +206,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
     }
 
 
-   /**
-     * Sets the value of this tuple to the vector difference of
-     * itself and tuple t1 (this = this - t1) .
-     * @param t1 the other tuple
-     */
     public final void sub(Tuple3f t1)
     {
         this.x -= t1.x;
@@ -251,10 +214,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
     }
 
 
-    /**
-     * Sets the value of this tuple to the negation of tuple t1.
-     * @param t1 the source tuple
-     */
     public final void negate(Tuple3f t1)
     {
 	this.x = -t1.x;
@@ -263,9 +222,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
     }
 
 
-    /**
-     * Negates the value of this tuple in place.
-     */
     public final void negate()
     {
 	this.x = -this.x;
@@ -274,12 +230,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
     }
 
 
-    /**
-     * Sets the value of this vector to the scalar multiplication
-     * of tuple t1.
-     * @param s the scalar value
-     * @param t1 the source tuple
-     */
     public final void scale(float s, Tuple3f t1)
     {
 	this.x = s*t1.x;
@@ -288,11 +238,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
     }
 
 
-    /**
-     * Sets the value of this tuple to the scalar multiplication
-     * of the scale factor with this.
-     * @param s the scalar value
-     */
     public final void scale(float s)
     {
 	this.x *= s;
@@ -301,13 +246,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
     }
 
 
-    /**
-     * Sets the value of this tuple to the scalar multiplication
-     * of tuple t1 and then adds tuple t2 (this = s*t1 + t2).
-     * @param s the scalar value
-     * @param t1 the tuple to be scaled and added
-     * @param t2 the tuple to be added without a scale
-     */
     public final void scaleAdd(float s, Tuple3f t1, Tuple3f t2)
     {
 	this.x = s*t1.x + t2.x;
@@ -316,13 +254,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
     }
 
 
-
-    /**
-     * Sets the value of this tuple to the scalar multiplication
-     * of itself and then adds tuple t1 (this = s*this + t1).
-     * @param s the scalar value
-     * @param t1 the tuple to be added
-     */
     public final void scaleAdd(float s, Tuple3f t1)
     {
         this.x = s*this.x + t1.x;
@@ -331,13 +262,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
     }
 
 
-   /**
-     * Returns true if the Object t1 is of type Tuple3f and all of the
-     * data members of t1 are equal to the corresponding data members in
-     * this Tuple3f.
-     * @param t1  the vector with which the comparison is made
-     * @return  true or false
-     */
     public boolean equals(Tuple3f t1)
     {
         try {
@@ -345,6 +269,7 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
         }
         catch (NullPointerException e2) {return false;}
     }
+
    /**
      * Returns true if the Object t1 is of type Tuple3f and all of the
      * data members of t1 are equal to the corresponding data members in
@@ -413,13 +338,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
 
 
 
-  /**
-    *  Clamps the tuple parameter to the range [low, high] and
-    *  places the values into this tuple.
-    *  @param min   the lowest value in the tuple after clamping
-    *  @param max  the highest value in the tuple after clamping
-    *  @param t   the source tuple, which will not be modified
-    */
    public final void clamp(float min, float max, Tuple3f t)
    {
         if( t.x > max ) {
@@ -449,12 +367,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
    }
 
 
-  /**
-    *  Clamps the minimum value of the tuple parameter to the min
-    *  parameter and places the values into this tuple.
-    *  @param min   the lowest value in the tuple after clamping
-    *  @param t   the source tuple, which will not be modified
-    */
    public final void clampMin(float min, Tuple3f t)
    {
         if( t.x < min ) {
@@ -478,12 +390,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
    }
 
 
-  /**
-    *  Clamps the maximum value of the tuple parameter to the max
-    *  parameter and places the values into this tuple.
-    *  @param max   the highest value in the tuple after clamping
-    *  @param t   the source tuple, which will not be modified
-    */
    public final void clampMax(float max, Tuple3f t)
    {
         if( t.x > max ) {
@@ -507,11 +413,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
    }
 
 
-  /**
-    *  Sets each component of the tuple parameter to its absolute
-    *  value and places the modified values into this tuple.
-    *  @param t   the source tuple, which will not be modified
-    */
   public final void absolute(Tuple3f t)
   {
        x = Math.abs(t.x);
@@ -520,12 +421,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
   }
 
 
-
-  /**
-    *  Clamps this tuple to the range [low, high].
-    *  @param min  the lowest value in this tuple after clamping
-    *  @param max  the highest value in this tuple after clamping
-    */
    public final void clamp(float min, float max)
    {
         if( x > max ) {
@@ -549,10 +444,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
    }
 
 
-  /**
-    *  Clamps the minimum value of this tuple to the min parameter.
-    *  @param min   the lowest value in this tuple after clamping
-    */
    public final void clampMin(float min)
    {
       if( x < min ) x=min;
@@ -562,10 +453,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
    }
 
 
-  /**
-    *  Clamps the maximum value of this tuple to the max parameter.
-    *  @param max   the highest value in the tuple after clamping
-    */
    public final void clampMax(float max)
    {
       if( x > max ) x=max;
@@ -575,9 +462,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
    }
 
 
-  /**
-    *  Sets each component of this tuple to its absolute value.
-    */
   public final void absolute()
   {
      x = Math.abs(x);
@@ -587,13 +471,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
   }
 
 
-  /**
-    *  Linearly interpolates between tuples t1 and t2 and places the
-    *  result into this tuple:  this = (1-alpha)*t1 + alpha*t2.
-    *  @param t1  the first tuple
-    *  @param t2  the second tuple
-    *  @param alpha  the alpha interpolation parameter
-    */
   public final void interpolate(Tuple3f t1, Tuple3f t2, float alpha)
   {
            this.x = (1-alpha)*t1.x + alpha*t2.x;
@@ -604,12 +481,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
   }
 
 
-  /**
-    *  Linearly interpolates between this tuple and tuple t1 and
-    *  places the result into this tuple:  this = (1-alpha)*this + alpha*t1.
-    *  @param t1  the first tuple
-    *  @param alpha  the alpha interpolation parameter
-    */
   public final void interpolate(Tuple3f t1, float alpha)
   {
      this.x = (1-alpha)*this.x + alpha*t1.x;
@@ -618,26 +489,6 @@ public abstract class Tuple3f implements java.io.Serializable, Cloneable {
 
 
   }
-
-    /**
-     * Creates a new object of the same class as this object.
-     *
-     * @return a clone of this instance.
-     * @exception OutOfMemoryError if there is not enough memory.
-     * @see java.lang.Cloneable
-     * @since vecmath 1.3
-     */
-    @Override
-    public Object clone() {
-	// Since there are no arrays we can just use Object.clone()
-	try {
-	    return super.clone();
-	} catch (CloneNotSupportedException e) {
-	    // this shouldn't happen, since we are Cloneable
-	    throw new InternalError();
-	}
-    }
-
 
     /**
 	 * Get the <i>x</i> coordinate.
